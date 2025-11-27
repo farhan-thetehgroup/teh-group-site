@@ -31,7 +31,8 @@ if (typeof document !== "undefined") {
   }
 }
 
-const UpcomingEventModal = ({ event, isOpen, onClose }) => {
+const UpcomingEventModal = ({ event, isOpen, onClose, onVideoPlay }) => {
+
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
@@ -168,7 +169,12 @@ const UpcomingEventModal = ({ event, isOpen, onClose }) => {
 
             <div className="flex-1 overflow-y-auto modal-no-scrollbar">
               {/* Banner Image */}
-              <div className="relative w-full aspect-video overflow-hidden rounded-t-3xl">
+              <div className="relative aspect-video overflow-hidden rounded-t-3xl group/banner cursor-pointer"
+                onClick={() => {
+                  if (event.video && onVideoPlay) {
+                    onVideoPlay(event.video);
+                  }
+                }}>
                 <img
                   src={event.image}
                   alt={event.title}
@@ -176,6 +182,25 @@ const UpcomingEventModal = ({ event, isOpen, onClose }) => {
                 />
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/70 to-transparent" />
+
+                {/* Video Play Button - Always Visible with Glow Animation */}
+                {event.video && (
+                  <div className="absolute bottom-6 right-6 z-20">
+                    {/* Animated Glow Rings */}
+                    <div className="absolute inset-0 -m-2 rounded-full bg-emerald-400/30 blur-xl animate-pulse" />
+                    <div className="absolute inset-0 -m-1 rounded-full bg-emerald-400/40 blur-md animate-pulse" style={{ animationDelay: '0.5s' }} />
+
+                    {/* Play Button */}
+                    <div className="relative w-14 h-14 md:w-16 md:h-16 rounded-full bg-emerald-500/90 backdrop-blur-md border-2 border-white/30 flex items-center justify-center shadow-[0_0_20px_rgba(16,185,129,0.5)] hover:shadow-[0_0_30px_rgba(16,185,129,0.8)] hover:scale-110 hover:bg-emerald-500 transition-all duration-300 cursor-pointer animate-pulse">
+                      <svg
+                        className="w-7 h-7 md:w-8 md:h-8 text-white ml-0.5"
+                        fill="currentColor"
+                        viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
+                  </div>
+                )}
 
                 {/* Registration Status Badge - Top Left */}
                 <div className="absolute top-6 left-6">

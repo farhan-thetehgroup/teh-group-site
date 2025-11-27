@@ -98,6 +98,8 @@ const products = [
       "Tech Fest is a premier, large-scale technology event designed to unite thousands of senior leaders and decision-makers from across industries. Powered by leading organizers like Cloud Forum (Kornerstone), Revive Tech Asia, and Cyber Attack (TEH Group), the event serves as a strategic platform for shaping the future of business through advancements in AI, cloud technologies, and cybersecurity. It stands as a key convergence point for innovation, collaboration, and high-level discussions driving the next era of digital transformation.",
     format:
       "Conference • Workshops • Roundtable Discussions • Exhibition • 1 to 1 Business Matchmaking • Awards Celebration",
+    video: "https://files.thetehgroup.com/hktechfest/Video/HIGHLIGHT-TECHFEST.mp4",
+    poster: "/images/banners/tech-fest.png",
     keyFeatures: [
       {
         icon: "M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z",

@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 // Add global style to hide scrollbar
@@ -21,6 +21,9 @@ if (typeof document !== "undefined") {
 
 const ProductModal = ({ product, isOpen, onClose }) => {
   const modalRef = useRef(null);
+  const videoRef = useRef(null);
+  const [isMuted, setIsMuted] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   // Default key features - can be overridden by product.keyFeatures
   const defaultKeyFeatures = [
@@ -68,6 +71,36 @@ const ProductModal = ({ product, isOpen, onClose }) => {
       return () => window.removeEventListener("keydown", handleEscape);
     }
   }, [isOpen, onClose]);
+
+  // Handle video controls
+  const handleToggleMute = (e) => {
+    e.stopPropagation();
+    const video = videoRef.current;
+    if (video) {
+      if (isMuted) {
+        video.muted = false;
+        video.volume = 1.0;
+        setIsMuted(false);
+      } else {
+        video.muted = true;
+        video.volume = 0;
+        setIsMuted(true);
+      }
+    }
+  };
+
+  const handlePlayPause = () => {
+    const video = videoRef.current;
+    if (video) {
+      if (isPlaying) {
+        video.pause();
+        setIsPlaying(false);
+      } else {
+        video.play();
+        setIsPlaying(true);
+      }
+    }
+  };
 
   return (
     <AnimatePresence>
@@ -222,6 +255,102 @@ const ProductModal = ({ product, isOpen, onClose }) => {
                   {product.description}
                 </p>
               </motion.div>
+
+              {/* Video Highlight (if available) */}
+              {product.video && (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.25 }}
+                  className="space-y-3">
+                  <h3 className="text-sm md:text-md uppercase tracking-[0.4em] text-emerald-300 font-semibold">
+                    Event Highlight Video
+                  </h3>
+                  <div className="relative aspect-video rounded-xl overflow-hidden border-2 border-emerald-500/30 group">
+                    <video
+                      ref={videoRef}
+                      className="w-full h-full object-cover"
+                      poster={product.poster}
+                      loop
+                      playsInline
+                      muted={isMuted}
+                      onPlay={() => setIsPlaying(true)}
+                      onPause={() => setIsPlaying(false)}>
+                      <source src={product.video} type="video/mp4" />
+                    </video>
+
+                    {/* Video Controls Overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+
+                    {/* Play/Pause Button - Center */}
+                    {!isPlaying && (
+                      <button
+                        onClick={handlePlayPause}
+                        className="absolute inset-0 flex items-center justify-center pointer-events-auto">
+                        <div className="w-16 h-16 rounded-full bg-emerald-500/90 backdrop-blur-sm flex items-center justify-center transform hover:scale-110 transition-transform duration-300 shadow-2xl">
+                          <svg
+                            className="w-8 h-8 text-white ml-1"
+                            fill="currentColor"
+                            viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                          </svg>
+                        </div>
+                      </button>
+                    )}
+
+                    {/* Mute/Unmute Button - Top Right */}
+                    {isPlaying && (
+                      <button
+                        className="absolute top-3 right-3 z-20 w-10 h-10 rounded-full bg-black/80 backdrop-blur-md border-2 border-emerald-400/70 flex items-center justify-center hover:bg-emerald-500 hover:scale-110 transition-all duration-300 group/sound shadow-lg pointer-events-auto"
+                        onClick={handleToggleMute}
+                        aria-label={isMuted ? "Unmute video" : "Mute video"}>
+                        {isMuted ? (
+                          <svg
+                            className="w-5 h-5 text-emerald-400 group-hover/sound:text-white transition-colors"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"
+                            />
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M17 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2"
+                            />
+                          </svg>
+                        ) : (
+                          <svg
+                            className="w-5 h-5 text-emerald-400 group-hover/sound:text-white transition-colors"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"
+                            />
+                          </svg>
+                        )}
+                      </button>
+                    )}
+
+                    {/* Click overlay to play/pause */}
+                    {isPlaying && (
+                      <button
+                        onClick={handlePlayPause}
+                        className="absolute inset-0 pointer-events-auto"
+                        aria-label="Pause video"
+                      />
+                    )}
+                  </div>
+                </motion.div>
+              )}
 
               {/* Format Section */}
               <motion.div

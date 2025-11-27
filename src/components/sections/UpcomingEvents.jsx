@@ -14,11 +14,14 @@ import {
   ChevronRight,
 } from "lucide-react";
 import UpcomingEventModal from "../UpcomingEventModal";
+import VideoModal from "../VideoModal";
 import { Badge } from "../Badge";
 
 const UpcomingEvents = () => {
   const [selectedEvent, setSelectedEvent] = useState(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+  const [videoSrc, setVideoSrc] = useState("");
 
   const upcomingEvents = [
     {
@@ -123,14 +126,15 @@ const UpcomingEvents = () => {
         "Welcome to the most electrifying tech experience in the city. Tech Fest Hong Kong unites over 2,000+ senior tech leaders, visionary executives and bold decision-makers - powered by the teams behind Cloud Forum (a KORNERSTONE event), Revive Tech Asia, and Cyber Attack (a TEH Group event).",
       image:
         "/images/banners/tech-fest.png",
+      video: "https://files.thetehgroup.com/hktechfest/Video/HIGHLIGHT-TECHFEST.mp4",
       registrationStatus: "Open",
       registrationLink:
         "https://event.thetehgroup.com/tech-fest-2026/overview?token=ZT0wZWFhMmU3YS0yNmM0LTRjMWQtODE4YS00NDgyMThhOTQ1OGI%3d",
       highlights: [
         "One-to-One Business Matchmaking",
         "2000+ Senior Tech Leaders",
-        "Workshops", 
-        "Roundtable Discussions", 
+        "Workshops",
+        "Roundtable Discussions",
         "Exhibition",
         "Awards Celebration",
         "Conferences",
@@ -663,11 +667,21 @@ const UpcomingEvents = () => {
         </div>
       </div>
 
-      {/* Modal */}
+      {/* Modals */}
       <UpcomingEventModal
         event={selectedEvent}
         isOpen={!!selectedEvent}
         onClose={() => setSelectedEvent(null)}
+        onVideoPlay={(video) => {
+          setVideoSrc(video);
+          setIsVideoModalOpen(true);
+        }}
+      />
+
+      <VideoModal
+        isOpen={isVideoModalOpen}
+        onClose={() => setIsVideoModalOpen(false)}
+        videoSrc={videoSrc}
       />
     </section>
   );
