@@ -168,7 +168,7 @@ const UpcomingEventModal = ({ event, isOpen, onClose }) => {
 
             <div className="flex-1 overflow-y-auto modal-no-scrollbar">
               {/* Banner Image */}
-              <div className="relative h-72 sm:h-80 lg:h-96 overflow-hidden rounded-t-3xl">
+              <div className="relative w-full aspect-video overflow-hidden rounded-t-3xl">
                 <img
                   src={event.image}
                   alt={event.title}

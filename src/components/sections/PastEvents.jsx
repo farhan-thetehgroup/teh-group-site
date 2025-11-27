@@ -115,7 +115,7 @@ const pastEvents = [
     description:
       "Tailored one-to-one business meetings aligning organizations with cutting-edge cybersecurity vendors, delivered with precision hospitality.",
     image:
-      "/images/banners/cyber-attack-my.jpg",
+      "/images/banners/CA-MY.png",
     gallery: [
       "/images/Documentations/Cyber-Attack-MY/CA-MY-1.jpg",
       "/images/Documentations/Cyber-Attack-MY/CA-MY-2.jpg",
@@ -603,18 +603,6 @@ const PastEvents = () => {
                         <div className="absolute top-3 right-3 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/10 text-xs font-semibold text-white">
                           #{String(index + 1).padStart(2, "0")}
                         </div>
-
-                        {/* Date & Location overlay */}
-                        <div className="absolute bottom-3 left-3 right-3 space-y-2">
-                          <div className="flex items-center gap-2 text-xs text-white/90 bg-black/40 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/10 w-fit">
-                            <Calendar className="w-3.5 h-3.5 text-blue-300" />
-                            {event.date}
-                          </div>
-                          <div className="flex items-center gap-2 text-xs text-white/90 bg-black/40 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/10 w-fit max-w-full">
-                            <MapPin className="w-3.5 h-3.5 text-cyan-300 flex-shrink-0" />
-                            <span className="truncate">{event.location}</span>
-                          </div>
-                        </div>
                       </div>
 
                       {/* Content section */}
@@ -628,6 +616,19 @@ const PastEvents = () => {
                             }`}>
                             {event.title}
                           </h3>
+                          
+                          {/* Date & Location badges */}
+                          <div className="flex flex-wrap gap-2 pt-1">
+                            <div className="flex items-center gap-2 text-xs text-white/90 bg-black/40 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/10">
+                              <Calendar className="w-3.5 h-3.5 text-blue-300" />
+                              {event.date}
+                            </div>
+                            <div className="flex items-center gap-2 text-xs text-white/90 bg-black/40 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/10">
+                              <MapPin className="w-3.5 h-3.5 text-cyan-300 flex-shrink-0" />
+                              <span className="truncate">{event.location}</span>
+                            </div>
+                          </div>
+                          
                           <p className="text-sm text-gray-300 leading-relaxed line-clamp-3">
                             {event.description}
                           </p>
