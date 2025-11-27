@@ -5,7 +5,7 @@ const WhatsAppButton = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   // Replace with your WhatsApp number (format: country code + number without + or spaces)
-  const phoneNumber = "6281234567890"; // Example: Indonesia number
+  const phoneNumber = "+85268019775"; // Example: Indonesia number
   const message = "Hello! I'm interested in learning more about The Teh Group.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
