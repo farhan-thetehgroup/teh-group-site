@@ -21,7 +21,7 @@ const pastEvents = [
     attendees: "120+",
     description:
       "Identity as the foundation of secure, scalable AI adoption—from continuous protection and adaptive access to frictionless experiences for both humans and AI systems.",
-    image: "/images/banners/Okta-Background.jpg",
+    image: "/images/banners/oktane-singapore.webp",
     gallery: [
       "/images/Documentations/Okta-Singapore-2025/OktaEventTehGroup023.jpg",
       "/images/Documentations/Okta-Singapore-2025/OktaEventTehGroup069.jpg",
