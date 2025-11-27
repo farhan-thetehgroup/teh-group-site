@@ -1,0 +1,1001 @@
+@import "tailwindcss";
+
+/* Root Variables */
+:root {
+  --background: var(--color-brand-50);
+  --foreground: #0a0a0a;
+  --color-brand-400-alpha: rgba(94, 198, 222, 0.4);
+
+  /* Z-index layers to prevent stacking issues */
+  --z-background: 0;
+  --z-section: 1;
+  --z-section-content: 2;
+  --z-section-overlay: 3;
+  --z-modal-backdrop: 40;
+  --z-modal: 50;
+  --z-floating-button: 45;
+  --z-header: 100;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a1628;
+    --foreground: #ffffff;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-brand-900);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-500);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-secondary-500);
+}
+
+/* Theme Variables */
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  --color-brand-foreground: #ffffff;
+
+  /* TEH Group Brand - Cyan Deep Blue */
+  --color-brand-50: #f3faf6;
+  --color-brand-100: #e6f3ec;
+  --color-brand-200: #cee7da;
+  --color-brand-300: #b4d8c5;
+  --color-brand-400: #9ac2a7; /* given */
+  --color-brand-500: #5fb78f; /* given */
+  --color-brand-600: #6ba187; /* given */
+  --color-brand-700: #5c967e; /* given */
+  --color-brand-800: #487564;
+  --color-brand-900: #365a4d;
+  --color-brand-950: #223b33;
+
+  /* Secondary Brand – Elegant Sand Gold */
+  --color-secondary: #fcd34d;
+  --color-secondary-50: #fefce8;
+  --color-secondary-100: #fef9c3;
+  --color-secondary-200: #fef08a;
+  --color-secondary-300: #fde047;
+  --color-secondary-400: #facc15;
+  --color-secondary-500: #fcd34d;
+  --color-secondary-600: #eab308;
+  --color-secondary-700: #ca8a04;
+  --color-secondary-800: #a16207;
+  --color-secondary-900: #854d0e;
+
+  /* Gradients */
+  --gradient-brand: linear-gradient(135deg, #51bed2 0%, #235977 100%);
+  --gradient-dark: linear-gradient(
+    135deg,
+    #0a1628 0%,
+    #265b77 50%,
+    #1a3f55 100%
+  );
+
+  /* Shadows */
+  --shadow-glow-brand: 0 0 20px rgba(81, 190, 210, 0.5);
+  --shadow-glow-secondary: 0 0 20px rgba(252, 211, 77, 0.4);
+}
+
+/* Base Styles */
+html {
+  scroll-behavior: auto; /* Let GSAP handle smoothness */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Smooth Scrolling Performance */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* OPTIMIZED: Removed aggressive will-change - browser handles better automatically */
+.will-change-transform {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.gpu-accelerated {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
+
+/* Utility Classes */
+.gradient-brand {
+  background: var(--gradient-brand);
+}
+
+.gradient-dark {
+  background: var(--gradient-dark);
+}
+
+.glow-brand {
+  box-shadow: var(--shadow-glow-brand);
+}
+
+.glow-secondary {
+  box-shadow: var(--shadow-glow-secondary);
+}
+
+/* Scroll utilities */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* 3D Transform utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Character animation for split text */
+.char {
+  display: inline-block;
+  transform-origin: center center;
+}
+
+/* Interactive card enhancements */
+.interactive-card {
+  transform-style: preserve-3d;
+  transition: all 0.3s ease;
+}
+
+.interactive-card:hover {
+  z-index: 10;
+}
+
+/* Hero background helpers */
+.hero-section {
+  position: relative;
+}
+
+/* OPTIMIZED: Removed animated background - too heavy */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* background-image: url("/images/pattern/hero.png"); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+  opacity: 0.75;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@media (max-width: 640px) {
+  .hero-section::before {
+    background-position: center;
+    opacity: 0.65;
+  }
+}
+
+@keyframes hero-float {
+  0% {
+    transform: translate3d(0, -10px, 0) scale(1.02);
+  }
+  50% {
+    transform: translate3d(0, 12px, 0) scale(1.035);
+  }
+  100% {
+    transform: translate3d(0, -8px, 0) scale(1.02);
+  }
+}
+
+/* Gradient Animation */
+@keyframes gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient 4s ease infinite;
+}
+
+/* Client marquee animation - Enhanced for smoother performance */
+@keyframes client-marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-33.333%, 0, 0);
+  }
+}
+
+@keyframes client-marquee-reverse {
+  from {
+    transform: translate3d(-33.333%, 0, 0);
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+/* OPTIMIZED: Removed will-change from marquee */
+.client-marquee {
+  animation: client-marquee var(--marquee-duration, 30s) linear infinite;
+  width: max-content;
+  display: flex;
+  align-items: center;
+}
+
+.client-marquee.reverse {
+  animation-name: client-marquee-reverse;
+}
+
+/* Pause animation on hover for better UX */
+.client-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Client card enhancements - ensure straight alignment */
+.client-card {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  position: relative;
+}
+
+.client-card img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* OPTIMIZED: Removed animated glow - use static hover instead */
+.client-card:hover {
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .client-marquee,
+  .client-marquee.reverse {
+    animation-duration: 0.001ms;
+    animation-iteration-count: 1;
+  }
+
+  .client-card:hover {
+    animation: none;
+  }
+}
+
+.glow-particle {
+  animation: particle-float 14s ease-in-out infinite;
+}
+
+@keyframes particle-float {
+  0% {
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate3d(10px, -12px, 0) scale(1.2);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translate3d(-6px, 8px, 0) scale(1);
+    opacity: 0.4;
+  }
+}
+
+.bg-radial-gradient {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(56, 189, 248, 0.4),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at 70% 40%,
+      rgba(14, 165, 233, 0.35),
+      transparent 50%
+    ),
+    radial-gradient(circle at 60% 70%, rgba(22, 163, 74, 0.25), transparent 60%);
+  mix-blend-mode: screen;
+}
+
+.globe-gradient-circle {
+  width: min(80vw, 620px);
+  aspect-ratio: 1;
+  border-radius: 9999px;
+  background:
+    radial-gradient(circle at 30% 25%, rgba(6, 78, 137, 0.85), transparent 70%),
+    radial-gradient(
+      circle at 70% 35%,
+      rgba(16, 185, 129, 0.65),
+      transparent 60%
+    ),
+    radial-gradient(circle at 50% 60%, rgba(5, 150, 105, 0.5), transparent 55%);
+  filter: blur(60px);
+  box-shadow: 0 0 80px rgba(16, 185, 129, 0.35);
+  mix-blend-mode: screen;
+  opacity: 0.85;
+}
+
+.animate-globe-gradient {
+  background-size: 200% 200%;
+  animation: pulseGlobe 10s ease infinite;
+}
+
+@keyframes pulseGlobe {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Fade In Animation for Testimonials */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Scroll Down Animation for Mouse Icon */
+@keyframes scroll-down {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  40% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+.animate-scroll-down {
+  animation: scroll-down 2s ease-in-out infinite;
+}
+
+/* Gradient Shift Animation for Product Indicators */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+    opacity: 0.8;
+  }
+  50% {
+    background-position: 100% 50%;
+    opacity: 1;
+  }
+  100% {
+    background-position: 0% 50%;
+    opacity: 0.8;
+  }
+}
+
+.animate-gradient-shift {
+  background-size: 200% 200%;
+  animation: gradient-shift 3s ease infinite;
+}
+
+/* Float Animation for Logo */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Shine Animation for Logo */
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 200%;
+  }
+}
+
+.animate-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 50%;
+  height: 100%;
+  animation: shine 4s ease-in-out infinite;
+}
+
+.float-logo {
+  animation: floatLogo 6s ease-in-out infinite;
+}
+
+@keyframes floatLogo {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(6px, -12px) scale(1.02);
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+}
+
+/* Logo 3D Animation */
+@keyframes logoGlow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 20px rgba(16, 185, 129, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 40px rgba(6, 182, 212, 0.8));
+  }
+}
+
+/* Floating Animation for Hero Orbs */
+@keyframes float {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  25% {
+    transform: translate(30px, -30px) scale(1.1);
+  }
+  50% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+  75% {
+    transform: translate(20px, 30px) scale(1.05);
+  }
+}
+
+/* Sponsors Marquee Animation */
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.sponsors-track {
+  animation: marquee 30s linear infinite;
+  will-change: transform;
+}
+
+.sponsors-track:hover {
+  animation-play-state: paused;
+}
+
+/* Hero Orb Animation */
+.hero-orb {
+  animation: float 8s ease-in-out infinite;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* Floating Animation Utility */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Slow Pulse Animation */
+@keyframes pulse-slow {
+  0%,
+  100% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+/* Location Cards Grid - Prevent Overlap */
+.location-card {
+  transform-origin: center center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  aspect-ratio: 1; /* Square cards for consistency */
+}
+
+/* Ensure consistent grid spacing */
+.presence-section .grid {
+  grid-auto-rows: 1fr; /* Equal height rows */
+  align-items: stretch;
+}
+
+/* Stats footer cards - compact */
+.stats-footer > div {
+  min-height: auto;
+}
+
+/* ==================== PERFORMANCE OPTIMIZATIONS ==================== */
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* OPTIMIZED: Removed will-change from blur effects */
+.blur-xl,
+.blur-2xl,
+.blur-3xl {
+  transform: translateZ(0);
+}
+
+/* Optimize gradient backgrounds */
+.bg-gradient-to-br,
+.bg-gradient-to-r,
+.bg-gradient-to-b,
+.bg-gradient-to-t {
+  will-change: auto;
+}
+
+/* Optimize backdrop blur for better performance */
+.backdrop-blur-sm,
+.backdrop-blur,
+.backdrop-blur-md,
+.backdrop-blur-xl {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  transform: translateZ(0);
+}
+
+/* OPTIMIZED: Removed will-change - browser optimizes automatically */
+.product-card,
+.service-card,
+.location-card,
+.testimonial-card,
+.stats-card,
+.hero-stat,
+.team-stat {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+/* Optimize scroll-triggered animations */
+[class*="section"] {
+  contain: layout style paint;
+}
+
+/* Optimize text rendering */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Contain paint for cards */
+.group {
+  contain: layout style paint;
+}
+
+/* Optimize images */
+img {
+  content-visibility: auto;
+}
+
+/* ==================== TEAM MEMBER CARDS ==================== */
+
+/* Team member card entrance animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.team-member-card {
+  animation: fadeInUp 0.6s ease-out forwards;
+  opacity: 0;
+}
+
+/* 3D Tilt effect on hover */
+.team-member-card:hover > div {
+  transform: perspective(1000px) rotateX(5deg) rotateY(-5deg) scale(1.05)
+    translateY(-8px);
+  box-shadow:
+    0 20px 40px rgba(16, 185, 129, 0.3),
+    0 0 80px rgba(16, 185, 129, 0.2);
+}
+
+/* Smooth transitions */
+.team-member-card > div {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+/* Image zoom and scroll effect on hover */
+.team-member-card:hover img {
+  transform: scale(1.15) translateY(-5px);
+}
+
+/* Gradient overlay animation */
+.team-member-card .absolute.bg-gradient-to-br {
+  transition: opacity 0.5s ease;
+}
+
+/* Social links slide up effect */
+.team-member-card .flex.gap-3 {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Border glow effect */
+.team-member-card:hover .border-transparent {
+  border-color: rgba(16, 185, 129, 0.5);
+  box-shadow:
+    inset 0 0 20px rgba(16, 185, 129, 0.3),
+    0 0 20px rgba(16, 185, 129, 0.4);
+}
+
+/* Decorative line animation */
+.team-member-card h3 {
+  transition: all 0.3s ease;
+  background-size: 200% auto;
+}
+
+/* OPTIMIZED: Removed will-change from team cards */
+.team-member-card {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.team-member-card img {
+  backface-visibility: hidden;
+}
+
+/* Global Performance Optimizations */
+.gsap-section {
+  position: relative;
+  isolation: isolate;
+  contain: layout style paint;
+}
+
+/* OPTIMIZED: Simplified GSAP animated elements */
+.gsap-animated {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+/* Prevent section overlap */
+section {
+  position: relative;
+  z-index: var(--z-section);
+  isolation: isolate;
+}
+
+/* OPTIMIZED: Removed will-change from hardware acceleration */
+.hardware-accelerated {
+  transform: translateZ(0);
+}
+
+/* Optimize blur effects */
+.blur-effect {
+  will-change: auto;
+  backface-visibility: hidden;
+}
+
+/* ==================== HERO BACKGROUND ANIMATIONS ==================== */
+
+/* Animated Grid Movement - creates depth and motion */
+@keyframes gridMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(80px, 80px);
+  }
+}
+
+.animate-gridMove {
+  animation: gridMove 20s linear infinite;
+  will-change: transform;
+}
+
+/* Flowing Lines - data stream effect */
+@keyframes flowLine {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.4;
+  }
+  90% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.animate-flowLine {
+  animation: flowLine 8s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+/* Digital Rain - Matrix-style effect */
+@keyframes digitalRain {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  90% {
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.animate-digitalRain {
+  animation: digitalRain 5s linear infinite;
+  will-change: transform, opacity;
+}
+
+/* Orb Float Animations - 3 different patterns for variety */
+@keyframes orbFloat1 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -40px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 30px) scale(0.95);
+  }
+}
+
+@keyframes orbFloat2 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(-40px, 30px) scale(1.05);
+  }
+  66% {
+    transform: translate(30px, -20px) scale(0.9);
+  }
+}
+
+@keyframes orbFloat3 {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(20px, 40px) scale(1.08);
+  }
+  66% {
+    transform: translate(-30px, -30px) scale(0.92);
+  }
+}
+
+.animate-orbFloat1 {
+  animation: orbFloat1 18s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-orbFloat2 {
+  animation: orbFloat2 22s ease-in-out infinite;
+  will-change: transform;
+}
+
+.animate-orbFloat3 {
+  animation: orbFloat3 25s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* ==================== FOOTER GALAXY ANIMATIONS ==================== */
+
+/* Twinkle Animation for Stars */
+@keyframes twinkle {
+  0%,
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+}
+
+.animate-twinkle {
+  animation: twinkle 3s ease-in-out infinite;
+  will-change: opacity, transform;
+}
+
+/* Galaxy Rotation - Slow spiral effect */
+@keyframes galaxy-rotate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.animate-galaxy-rotate {
+  animation: galaxy-rotate 120s linear infinite;
+  will-change: transform;
+}
+
+/* Floating Animation with Delay */
+@keyframes float-delayed {
+  0%,
+  100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(-25px, 35px) scale(1.08);
+  }
+  66% {
+    transform: translate(25px, -25px) scale(0.95);
+  }
+}
+
+.animate-float-delayed {
+  animation: float-delayed 10s ease-in-out infinite;
+  animation-delay: 1s;
+  will-change: transform;
+}
+
+/* Shooting Star Animation */
+@keyframes shooting-star {
+  0% {
+    transform: translateX(0) translateY(0) rotate(45deg);
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(1200px) translateY(600px) rotate(45deg);
+    opacity: 0;
+  }
+}
+
+.animate-shooting-star {
+  animation: shooting-star 3s ease-out infinite;
+  will-change: transform, opacity;
+}
+
+/* Enhanced Glow Pulse for Logo */
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+  will-change: opacity, transform;
+}
+
+/* Delayed Pulse Glow */
+@keyframes pulse-glow-delayed {
+  0%,
+  100% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
+}
+
+.animate-pulse-glow-delayed {
+  animation: pulse-glow-delayed 3s ease-in-out infinite;
+  animation-delay: 0.5s;
+  will-change: opacity, transform;
+}
