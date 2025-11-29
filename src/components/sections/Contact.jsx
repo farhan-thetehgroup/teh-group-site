@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import useRecaptcha from "../../utils/useRecaptcha";
 import { Badge } from "../Badge";
 import { Mail } from "lucide-react";
 
@@ -15,7 +15,7 @@ const Contact = () => {
   const sectionRef = useRef();
   const formRef = useRef();
   const animationCtx = useRef(null);
-  const { executeRecaptcha } = useGoogleReCaptcha();
+  const { executeRecaptcha } = useRecaptcha();
   const [isMobile, setIsMobile] = useState(false);
   const [formData, setFormData] = useState({
     from_name: "",
