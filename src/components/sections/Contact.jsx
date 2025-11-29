@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 import { Badge } from "../Badge";
 import { Mail } from "lucide-react";
 
@@ -14,6 +15,7 @@ const Contact = () => {
   const sectionRef = useRef();
   const formRef = useRef();
   const animationCtx = useRef(null);
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const [isMobile, setIsMobile] = useState(false);
   const [formData, setFormData] = useState({
     from_name: "",
@@ -117,7 +119,24 @@ const Contact = () => {
         setStatus("error");
         setStatusMessage("Please fix the highlighted fields.");
         setFieldErrors(newFieldErrors);
+        setLoading(false);
         return;
+      }
+
+      // Execute reCAPTCHA v3
+      let recaptchaToken = null;
+      if (executeRecaptcha) {
+        try {
+          recaptchaToken = await executeRecaptcha("contact_form_submit");
+        } catch (error) {
+          console.error("reCAPTCHA execution error:", error);
+          setStatus("error");
+          setStatusMessage(
+            "reCAPTCHA verification failed. Please try again."
+          );
+          setLoading(false);
+          return;
+        }
       }
 
       const response = await fetch(API_ENDPOINT, {
@@ -132,6 +151,7 @@ const Contact = () => {
           phone_number: formData.phone,
           company_name: formData.company,
           message: formData.message,
+          recaptcha_token: recaptchaToken,
         }),
       });
       const responseBody = await response.json().catch(() => null);
