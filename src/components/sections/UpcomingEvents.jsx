@@ -61,13 +61,13 @@ const UpcomingEvents = () => {
     },
     {
       id: 5,
-      title: "All IT Golf Buddies!",
+      title: "Defend Your Data: Exploring the Future of Application & Data Security",
       date: "2025-12-03",
-      location: "Kuala Lumpur, Malaysia",
+      location: "The Par Club, Marina Square, Singapore",
       type: "Golf",
       attendees: "20+",
       description:
-        "Join Nexus Club: All IT Golf Buddies! Whether you're new to golf, a seasoned pro, or simply curious about the game and encryption we encourage you to join us! Just like mastering golf, encrypting your data and access requires practice, skill, and the right guidance. It's about protecting what matters while enjoying the journey.",
+        "Join Us for a Simulator Golf Event and Learn About Data Security! Whether you're new to golf, a seasoned player, or simply interested in the intersection of sports and data security, we invite you to join us for an engaging evening of fun and learning. Just like mastering your golf skills, securing your data requires the right guidance and effective training.",
       image:
         "/images/banners/All-IT-Golf-Buddies.webp",
       registrationStatus: "Open",
