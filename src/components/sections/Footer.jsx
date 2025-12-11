@@ -82,6 +82,24 @@ const Footer = () => {
     },
   ];
 
+  const offices = [
+    {
+      name: "Indonesia",
+      company: "PT TRIUMP EMINENT HUB",
+      address: "Jalan Mampang Prpt. Raya Nomor 100 5, Desa/Kelurahan Tegal Parang, Kec. Mampang Prapatan, Kota Adm. Jakarta Selatan, Provinsi DKI Jakarta",
+    },
+    {
+      name: "Hong Kong",
+      company: "TRIUMP EMINENT HUB Sdn Bhd",
+      address: "Room 2508, 25th Floor, Tower One Lippo Centre, No.89 Queensway, Hong Kong",
+    },
+    {
+      name: "Malaysia",
+      company: "TRIUMP EMINENT HUB Sdn Bhd",
+      address: "Menara 1, Jalan Bangsar, KL Eco City, 59200 Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",
+    },
+  ];
+
   const socialLinks = [
     {
       name: "LinkedIn",
@@ -180,6 +198,38 @@ const Footer = () => {
           </p>
         </div>
 
+        {/* Offices Section */}
+        <div className="space-y-8">
+          <div className="text-center">
+            <h4 className="text-2xl font-black tracking-[0.15em] text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-500 mb-2">
+              OFFICES
+            </h4>
+            <div className="w-24 h-0.5 mx-auto bg-gradient-to-r from-transparent via-emerald-400 to-transparent"></div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {offices.map((office) => (
+              <div
+                key={office.name}
+                className="relative group backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-emerald-400/30 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-emerald-500/20">
+                {/* Glass card glow effect */}
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-400/20 via-cyan-400/20 to-blue-500/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
+                
+                <div className="space-y-3 relative z-10">
+                  <div className="font-bold text-white text-lg mb-1">
+                    {office.name}
+                  </div>
+                  <div className="text-sm text-emerald-300/90 font-medium">
+                    {office.company}
+                  </div>
+                  <div className="text-sm text-slate-300/80 leading-relaxed pt-2 border-t border-white/10">
+                    {office.address}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
           {linkColumns.map((column) => (
             <div key={column.title} className="space-y-4">
@@ -219,7 +269,7 @@ const Footer = () => {
             ))}
           </div>
           <div className="text-xs uppercase tracking-[0.1em] text-slate-400">
-            © 2025 PT TRIUMPH EMINENT HUB. All rights reserved. Created with ❤
+            © 2025 TEH Group. All rights reserved. Created with ❤
           </div>
         </div>
       </div>
