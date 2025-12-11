@@ -219,7 +219,7 @@ const Footer = () => {
             ))}
           </div>
           <div className="text-xs uppercase tracking-[0.1em] text-slate-400">
-            © 2025 TEH Group. All rights reserved. Created with ❤
+            © 2025 PT TRIUMPH EMINENT HUB. All rights reserved. Created with ❤
           </div>
         </div>
       </div>
