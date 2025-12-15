@@ -1,4 +1,10 @@
+import { useState } from "react";
+import PrivacyPolicyModal from "../PrivacyPolicyModal";
+import TermsAndConditionsModal from "../TermsAndConditionsModal";
+
 const Footer = () => {
+  const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
+  const [isTermsModalOpen, setIsTermsModalOpen] = useState(false);
   const linkColumns = [
     {
       title: "PRODUCTS",
@@ -268,11 +274,34 @@ const Footer = () => {
               </a>
             ))}
           </div>
-          <div className="text-xs uppercase tracking-[0.1em] text-slate-400">
-            © 2025 TEH Group. All rights reserved. Created with ❤
+          <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+            <div className="flex items-center gap-4 text-xs text-slate-400">
+              <button
+                onClick={() => setIsPrivacyModalOpen(true)}
+                className="hover:text-emerald-400 transition-colors duration-300 cursor-pointer">
+                Privacy Policy
+              </button>
+              <span className="text-slate-500">|</span>
+              <button
+                onClick={() => setIsTermsModalOpen(true)}
+                className="hover:text-emerald-400 transition-colors duration-300 cursor-pointer">
+                Terms & Conditions
+              </button>
+            </div>
+            <div className="text-xs uppercase tracking-[0.1em] text-slate-400">
+              © 2025 TEH Group. All rights reserved. Created with ❤
+            </div>
           </div>
         </div>
       </div>
+      <PrivacyPolicyModal
+        isOpen={isPrivacyModalOpen}
+        onClose={() => setIsPrivacyModalOpen(false)}
+      />
+      <TermsAndConditionsModal
+        isOpen={isTermsModalOpen}
+        onClose={() => setIsTermsModalOpen(false)}
+      />
     </footer>
   );
 };
