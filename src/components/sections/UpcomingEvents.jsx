@@ -24,79 +24,38 @@ const UpcomingEvents = () => {
   const [videoSrc, setVideoSrc] = useState("");
 
   const upcomingEvents = [
-    {
-      id: 3,
-      title: "Momentum in Insurance – Hong Kong",
-      date: "2025-11-27",
-      location: "Prince and the Peacock, Hongkong",
-      type: "Networking Drinks",
-      attendees: "30+",
-      description:
-        "Hong Kong's insurance sector is at a turning point. Beyond managing technical debt, insurers must now address capability debt to accelerate their plans to build new digital and operational capabilities to remain competitive, accelerate growth, and align with the city's vision as a global insurance hub. DXC Technology, together with AWS, ServiceNow, and Dynatrace, invites you to an exclusive executive session: Momentum in Insurance - Hong Kong.",
-      image:
-        "/images/banners/Momentum-in-Insurance.webp",
-      registrationStatus: "Open",
-      registrationLink: "https://momentum-in-insurance-1.thetehgroup.com/",
-      highlights: ["Networking Drinks", "Exclusive Executive Session"],
-    },
-    {
-      id: 4,
-      title: "Cyber Leaders Forum 2025: Securing Industries with AI",
-      date: "2025-11-27",
-      location: "Accenture Client Experience Center, Philippines",
-      type: "Immersive Session",
-      attendees: "10+",
-      description:
-        "Join us for Cyber Leaders Forum 2025, themed 'Securing Industries with AI.' This is not just a seminar; it is a strategic dialogue designed for leaders who carry the responsibility for national-scale operations, critical infrastructure, and business continuity.",
-      image:
-        "/images/banners/Cyber-Leader-Forum-2025.webp",
-      registrationStatus: "Open",
-      registrationLink:
-        "https://event.thetehgroup.com/cyber-leaders-forum-2025-securing-industries-with-ai/overview?token=ZT1hZWQ4ODM5My03MzcxLTQzZDMtYTdlZi05YTQ4NTExNjUxNzI%3d",
-      highlights: [
-        "Explore Real-World Case Studies",
-        "Network with Industry PeersLuxury Resort",
-        "Strategic Planning",
-      ],
-    },
-    {
-      id: 5,
-      title: "Defend Your Data: Exploring the Future of Application & Data Security",
-      date: "2025-12-03",
-      location: "The Par Club, Marina Square, Singapore",
-      type: "Golf",
-      attendees: "20+",
-      description:
-        "Join Us for a Simulator Golf Event and Learn About Data Security! Whether you're new to golf, a seasoned player, or simply interested in the intersection of sports and data security, we invite you to join us for an engaging evening of fun and learning. Just like mastering your golf skills, securing your data requires the right guidance and effective training.",
-      image:
-        "/images/banners/All-IT-Golf-Buddies.webp",
-      registrationStatus: "Open",
-      registrationLink:
-        "https://event.thetehgroup.com/all-it-golf-buddies/overview?token=ZT0yYjQ5YWZmYi02MzBiLTQ5N2QtYTYxNy0yOWVjYzBkNGNiZGM%3d",
-      highlights: ["Fun Golf", "Networking Drinks"],
-    },
     // {
-    //   id: 6,
-    //   title: "TrendMicro Indonesia : Cyber Risk Exposure Management",
-    //   date: "2025-12-04",
-    //   location: "The Langham Jakarta, Indonesia",
-    //   type: "Exclusive Sessions",
+    //   id: 3,
+    //   title: "Momentum in Insurance – Hong Kong",
+    //   date: "2025-11-27",
+    //   location: "Prince and the Peacock, Hongkong",
+    //   type: "Networking Drinks",
     //   attendees: "30+",
     //   description:
-    //     "This Event provides substance and relevance to attract audience by addressing current challenges and strategies in cyber risk exposure management. Overview of the importance of cyber risk exposure management in today's threat landscape and introduction to the day's agenda.",
+    //     "Hong Kong's insurance sector is at a turning point. Beyond managing technical debt, insurers must now address capability debt to accelerate their plans to build new digital and operational capabilities to remain competitive, accelerate growth, and align with the city's vision as a global insurance hub. DXC Technology, together with AWS, ServiceNow, and Dynatrace, invites you to an exclusive executive session: Momentum in Insurance - Hong Kong.",
     //   image:
-    //     "https://files.thetehgroup.com/banner/website/TrendMicro-Indonesia.webp",
+    //     "/images/banners/Momentum-in-Insurance.webp",
     //   registrationStatus: "Open",
-    //   registrationLink:
-    //     "https://event.thetehgroup.com/trendmicro-indonesia-cyber-risk-exposure-management/overview?token=ZT0wY2E5Yjg5MC1jOWQ5LTQ4ODAtOGZmZC01MTljOGM5NTdkNWU%3d",
-    //   highlights: [
-    //     "Business Strategy",
-    //     "Cybersecurity Awareness",
-    //     "Cyber Risk Mitigation",
-    //   ],
+    //   registrationLink: "https://momentum-in-insurance-1.thetehgroup.com/",
+    //   highlights: ["Networking Drinks", "Exclusive Executive Session"],
     // },
     {
-      id: 7,
+      id: 1,
+      title: "Zenith Live Encore Malaysia",
+      date: "2026-01-22",
+      location: "The St. Regis, Jalan Stesen Sentral 2, Kuala Lumpur Sentral, Malaysia",
+      type: "Networking Lunch",
+      attendees: "30+",
+      description:
+        "Join us for this morning event focused on accelerating your Zero Trust journey, expanding your Zscaler use cases, and learning how Industry is driving better outcomes across users, workloads, branches, OT/IoT, and AI.",
+      image:
+        "https://storage.thetehgroup.com/flmngr-prod/images/69280c62b070c_8e30af1a78b17aaf880ef1f9f5853c47.jpg",
+      registrationStatus: "Open",
+      registrationLink: "https://event.thetehgroup.com/zenith-live-encore-malaysia/overview?token=ZT01NDgzNDU1NC05NTg0LTQwOGMtOGFmOC1hYTBjZDkyOTIxZGY%3d",
+      highlights: ["Networking Lunch", "Exclusive Executive Session"],
+    },
+    {
+      id: 2,
       title: "Nexus Indonesia 2026",
       date: "2026-02-04",
       location: "Pullman Ciawi Vimala Hills Resort, Indonesia",
@@ -116,7 +75,42 @@ const UpcomingEvents = () => {
       ],
     },
     {
-      id: 8,
+      id: 3,
+      title: "Nexus Singapore 2026",
+      date: "2026-03-11",
+      location: "Mandai Rainforest Resort by Banyan Tree",
+      type: "Conference",
+      attendees: "200+",
+      description:
+        "Join us for Nexus Singapore 2026, an exclusive executive retreat that redefines the traditional conference experience by uniting the most influential leaders in cybersecurity, AI  and digital innovation for intimate, high-level discussions, curated thought leadership, and actionable outcomes. Designed to foster candor, collaboration, and meaningful partnerships, Nexus blends strategic dialogue with structured buyer-seller engagements, creating both transformative insights and tangible business opportunities. It is a rare environment where leadership meets opportunity-exclusive, purposeful, and built to deliver results This exclusive event will bring together senior executives, technology leaders, and innovators to explore the latest trends, address real-world challenges, and build strategic connections that shape the future of AI and Cybersecurity.",
+      image:
+        "https://storage.thetehgroup.com/flmngr-prod/images/68d2499badd26_FA 16x9 AI Nexus APAC 2026 Landing Page.webp",
+      registrationStatus: "Open",
+      registrationLink: "https://event.thetehgroup.com/-nexus-singapore-2026/overview?token=ZT1kNmZmMTFiMC1iZTFhLTQ0NjEtOWY3OS05MjczMmY0MmY4ZjU%3d",
+      highlights: ["Conference", "Exclusive Executive Session"],
+    },
+    {
+      id: 4,
+      title: "Beyond Passwords: Securing the Workforce with Zero Trust – Exclusive Luncheon Roundtable",
+      date: "2026-03-12",
+      location: "Pullman Melbourne City Centre - Room 1954",
+      type: "Roundtable Luncheon",
+      attendees: "20+",
+      description:
+        "Join us for an exclusive roundtable luncheon to explore how adopting phishing-resistant authentication can help you strengthen your security posture while delivering a seamless user experience. Together, we’ll unpack the principles of Zero Trust, passwordless access, and modern authentication strategies that leading organisations are leveraging to reduce risk and streamline workforce security.",
+      image:
+        "/images/banners/Exclusive-luncheon.png",
+      registrationStatus: "Open",
+      registrationLink:
+        "https://event.thetehgroup.com/-beyond-passwords-securing-the-workforce-with-zero-trust-exclusive-luncheon-roundtable/overview?token=ZT03YTFlNjc2NC04ZDhlLTQ4NjQtYTFlNy00YmZkNjc0ZTBkMGU%3d",
+      highlights: [
+        "Business Strategy",
+        "Exclusive Luncheon Roundtable",
+        "Exclusive Executive Session",
+      ],
+    },
+    {
+      id: 5,
       title: "Tech Fest 2026",
       date: "2026-05-21",
       location: "Convention Hall, Hong Kong Convention and Exhibition Centre",

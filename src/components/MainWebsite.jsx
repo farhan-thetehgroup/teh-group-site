@@ -1,6 +1,7 @@
 import WhatsAppButton from "./WhatsAppButton";
 import Hero from "./sections/Hero";
 import About from "./sections/About";
+import AboutWithVideo from "./sections/About.withVideo";
 import OurClients from "./sections/OurClients";
 import BrandProducts from "./sections/BrandProducts";
 import PastEvents from "./sections/PastEvents";
@@ -16,7 +17,7 @@ import RegionalPresence from "./sections/RegionalPresence";
 
 const sectionList = [
   { label: "Hero", Component: Hero, lazy: false },
-  { label: "About", Component: About, lazy: true },
+  { label: "About", Component: AboutWithVideo, lazy: true },
   { label: "Our Clients", Component: OurClients, lazy: true },
   { label: "Our Services", Component: OurService, lazy: true },
   // { label: "Client Testimonials", Component: ClientTestimonials, lazy: true },

@@ -2,11 +2,7 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { X, Play } from "lucide-react";
 
-export default function VideoModal({
-  isOpen,
-  onClose,
-  videoSrc = "https://cyberattack-event.com/wp-content/uploads/2024/10/CA-MY-EVENT-DRAFT-2.mp4",
-}) {
+export default function VideoModal({ isOpen, onClose, videoSrc }) {
   const [videoError, setVideoError] = useState(false);
   const [isClient, setIsClient] = useState(false);
   const [hasAnimatedIn, setHasAnimatedIn] = useState(false);
@@ -49,20 +45,22 @@ export default function VideoModal({
 
   const modalContent = (
     <div
-      className={`fixed inset-0 z-[9999] flex items-center justify-center px-4 transition-opacity duration-500 ease-out ${
+      className={`fixed inset-0 z-9999 flex items-center justify-center px-4 transition-opacity duration-500 ease-out ${
         hasAnimatedIn ? "opacity-100" : "opacity-0"
       }`}
       onClick={onClose}>
-      <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-slate-950/70 to-black/85 backdrop-blur-[20px]" />
+      <div className="absolute inset-0 bg-linear-to-br from-black/80 via-slate-950/70 to-black/85 backdrop-blur-[20px]" />
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(16,185,129,0.18),_transparent_55%)]" />
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,_rgba(59,130,246,0.15),_transparent_60%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(16,185,129,0.18),transparent_55%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom,rgba(59,130,246,0.15),transparent_60%)]" />
       </div>
 
       {/* Modal Container */}
       <div
         className={`relative w-full max-w-6xl aspect-video bg-slate-950/40 backdrop-blur-2xl rounded-[28px] border border-white/10 shadow-[0_25px_120px_rgba(0,0,0,0.65)] overflow-hidden transition-all duration-500 ease-out transform ${
-          hasAnimatedIn ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 translate-y-4"
+          hasAnimatedIn ?
+            "opacity-100 scale-100 translate-y-0"
+          : "opacity-0 scale-95 translate-y-4"
         }`}
         onClick={(e) => e.stopPropagation()}>
         <div className="absolute inset-0 pointer-events-none">
@@ -91,7 +89,7 @@ export default function VideoModal({
 
         {/* Fallback: If no video source, show message */}
         {(!videoSrc || videoError) && (
-          <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-slate-900 to-slate-800 rounded-[28px]">
+          <div className="absolute inset-0 flex items-center justify-center bg-linear-to-br from-slate-900 to-slate-800 rounded-[28px]">
             <div className="text-center p-8">
               <Play className="w-16 h-16 mx-auto mb-4 text-emerald-400" />
               <h3 className="text-2xl font-bold text-white mb-2">
@@ -106,14 +104,6 @@ export default function VideoModal({
             </div>
           </div>
         )}
-      </div>
-
-      {/* Click Outside to Close Hint */}
-      <div
-        className={`absolute bottom-8 left-1/2 -translate-x-1/2 text-white/70 text-sm transition-all duration-500 ${
-          hasAnimatedIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
-        }`}>
-        Click outside or press ESC to close
       </div>
     </div>
   );
