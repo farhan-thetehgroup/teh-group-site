@@ -58,7 +58,7 @@ const UpcomingEvents = () => {
       id: 2,
       title: "Nexus Indonesia 2026",
       date: "2026-02-04",
-      location: "Pullman Ciawi Vimala Hills Resort, Indonesia",
+      location: "Royal Tulip Gunung Geulis Resort and Golf, Indonesia",
       type: "Conference",
       attendees: "200+",
       description:
