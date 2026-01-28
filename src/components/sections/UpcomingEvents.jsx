@@ -39,23 +39,23 @@ const UpcomingEvents = () => {
     //   registrationLink: "https://momentum-in-insurance-1.thetehgroup.com/",
     //   highlights: ["Networking Drinks", "Exclusive Executive Session"],
     // },
+    // {
+    //   id: 1,
+    //   title: "Zenith Live Encore Malaysia",
+    //   date: "2026-01-22",
+    //   location: "The St. Regis, Jalan Stesen Sentral 2, Kuala Lumpur Sentral, Malaysia",
+    //   type: "Networking Lunch",
+    //   attendees: "30+",
+    //   description:
+    //     "Join us for this morning event focused on accelerating your Zero Trust journey, expanding your Zscaler use cases, and learning how Industry is driving better outcomes across users, workloads, branches, OT/IoT, and AI.",
+    //   image:
+    //     "https://storage.thetehgroup.com/flmngr-prod/images/69280c62b070c_8e30af1a78b17aaf880ef1f9f5853c47.jpg",
+    //   registrationStatus: "Open",
+    //   registrationLink: "https://event.thetehgroup.com/zenith-live-encore-malaysia/overview?token=ZT01NDgzNDU1NC05NTg0LTQwOGMtOGFmOC1hYTBjZDkyOTIxZGY%3d",
+    //   highlights: ["Networking Lunch", "Exclusive Executive Session"],
+    // },
     {
       id: 1,
-      title: "Zenith Live Encore Malaysia",
-      date: "2026-01-22",
-      location: "The St. Regis, Jalan Stesen Sentral 2, Kuala Lumpur Sentral, Malaysia",
-      type: "Networking Lunch",
-      attendees: "30+",
-      description:
-        "Join us for this morning event focused on accelerating your Zero Trust journey, expanding your Zscaler use cases, and learning how Industry is driving better outcomes across users, workloads, branches, OT/IoT, and AI.",
-      image:
-        "https://storage.thetehgroup.com/flmngr-prod/images/69280c62b070c_8e30af1a78b17aaf880ef1f9f5853c47.jpg",
-      registrationStatus: "Open",
-      registrationLink: "https://event.thetehgroup.com/zenith-live-encore-malaysia/overview?token=ZT01NDgzNDU1NC05NTg0LTQwOGMtOGFmOC1hYTBjZDkyOTIxZGY%3d",
-      highlights: ["Networking Lunch", "Exclusive Executive Session"],
-    },
-    {
-      id: 2,
       title: "Nexus Indonesia 2026",
       date: "2026-02-04",
       location: "Royal Tulip Gunung Geulis Resort and Golf, Indonesia",
@@ -73,6 +73,21 @@ const UpcomingEvents = () => {
         "Technology Showcase",
         "Expert-Led Sessions",
       ],
+    },
+    {
+      id: 2,
+      title: "Identity Day",
+      date: "2026-02-10",
+      location: "The Orient Hotel, Jakarta",
+      type: "Exclusive Luncheon",
+      attendees: "30+",
+      description:
+        "Identity Day Indonesia is an exclusive executive forum for senior technology and security leaders seeking to elevate identity from a control function into a strategic business enabler. As digital ecosystems grow more complex, this event offers critical insights into the evolution of Identity Governance and Administration (IGA), the rise of machine identities, and the role of identity moderation in ensuring visibility, accountability, and trust. Through expert-led perspectives and peer-level discussions, delegates will gain actionable strategies to strengthen security posture, improve operational efficiency, and build resilient, future-ready identity frameworks that support sustainable business growth.",
+      image:
+        "https://storage.thetehgroup.com/flmngr-prod/images/6949ed1e651f7_identity.webp",
+      registrationStatus: "Open",
+      registrationLink: "https://event.thetehgroup.com/identity-day-indonesia/overview?token=ZT1iZjVmY2ZkOC01OWI5LTRmMDUtOWUyYy1lNjY0Y2U2ZGJhNGI%3d",
+      highlights: ["Networking Lunch", "Exclusive Executive Session"],
     },
     {
       id: 3,
