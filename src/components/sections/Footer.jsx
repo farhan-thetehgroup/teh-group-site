@@ -91,17 +91,17 @@ const Footer = () => {
   const offices = [
     {
       name: "Indonesia",
-      company: "PT TRIUMP EMINENT HUB",
+      company: "TEH Group",
       address: "Jalan Mampang Prpt. Raya Nomor 100 5, Desa/Kelurahan Tegal Parang, Kec. Mampang Prapatan, Kota Adm. Jakarta Selatan, Provinsi DKI Jakarta",
     },
     {
       name: "Hong Kong",
-      company: "TRIUMP EMINENT HUB Sdn Bhd",
+      company: "TEH Group",
       address: "Room 2508, 25th Floor, Tower One Lippo Centre, No.89 Queensway, Hong Kong",
     },
     {
       name: "Malaysia",
-      company: "TRIUMP EMINENT HUB Sdn Bhd",
+      company: "TEH Group",
       address: "Menara 1, Jalan Bangsar, KL Eco City, 59200 Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",
     },
   ];
