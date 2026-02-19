@@ -54,46 +54,46 @@ const UpcomingEvents = () => {
     //   registrationLink: "https://event.thetehgroup.com/zenith-live-encore-malaysia/overview?token=ZT01NDgzNDU1NC05NTg0LTQwOGMtOGFmOC1hYTBjZDkyOTIxZGY%3d",
     //   highlights: ["Networking Lunch", "Exclusive Executive Session"],
     // },
+    // {
+    //   id: 1,
+    //   title: "Nexus Indonesia 2026",
+    //   date: "2026-02-04",
+    //   location: "Royal Tulip Gunung Geulis Resort and Golf, Indonesia",
+    //   type: "Conference",
+    //   attendees: "200+",
+    //   description:
+    //     "Join us for AI Nexus Indonesia 2026, a premier gathering of leading minds in Artificial Intelligence and Cybersecurity from across Asia. This exclusive event will bring together senior executives, technology leaders, and innovators to explore the latest trends, address real-world challenges, and build strategic connections that shape the future of AI and Cybersecurity.",
+    //   image:
+    //     "/images/banners/Nexus-Apac-Indonesia.webp",
+    //   registrationStatus: "Open",
+    //   registrationLink:
+    //     "https://event.thetehgroup.com/-nexus-indonesia-2026/overview?token=ZT1jNTU3N2JiMy0wOTJkLTRjNjUtODIyNi0zMjUzODEwNDE4NGU%3d",
+    //   highlights: [
+    //     "One-to-One Meetings",
+    //     "Technology Showcase",
+    //     "Expert-Led Sessions",
+    //   ],
+    // },
+    // {
+    //   id: 2,
+    //   title: "Identity Day",
+    //   date: "2026-02-10",
+    //   location: "The Orient Hotel, Jakarta",
+    //   type: "Exclusive Luncheon",
+    //   attendees: "30+",
+    //   description:
+    //     "Identity Day Indonesia is an exclusive executive forum for senior technology and security leaders seeking to elevate identity from a control function into a strategic business enabler. As digital ecosystems grow more complex, this event offers critical insights into the evolution of Identity Governance and Administration (IGA), the rise of machine identities, and the role of identity moderation in ensuring visibility, accountability, and trust. Through expert-led perspectives and peer-level discussions, delegates will gain actionable strategies to strengthen security posture, improve operational efficiency, and build resilient, future-ready identity frameworks that support sustainable business growth.",
+    //   image:
+    //     "https://storage.thetehgroup.com/flmngr-prod/images/6949ed1e651f7_identity.webp",
+    //   registrationStatus: "Open",
+    //   registrationLink: "https://event.thetehgroup.com/identity-day-indonesia/overview?token=ZT1iZjVmY2ZkOC01OWI5LTRmMDUtOWUyYy1lNjY0Y2U2ZGJhNGI%3d",
+    //   highlights: ["Networking Lunch", "Exclusive Executive Session"],
+    // },
     {
       id: 1,
-      title: "Nexus Indonesia 2026",
-      date: "2026-02-04",
-      location: "Royal Tulip Gunung Geulis Resort and Golf, Indonesia",
-      type: "Conference",
-      attendees: "200+",
-      description:
-        "Join us for AI Nexus Indonesia 2026, a premier gathering of leading minds in Artificial Intelligence and Cybersecurity from across Asia. This exclusive event will bring together senior executives, technology leaders, and innovators to explore the latest trends, address real-world challenges, and build strategic connections that shape the future of AI and Cybersecurity.",
-      image:
-        "/images/banners/Nexus-Apac-Indonesia.webp",
-      registrationStatus: "Open",
-      registrationLink:
-        "https://event.thetehgroup.com/-nexus-indonesia-2026/overview?token=ZT1jNTU3N2JiMy0wOTJkLTRjNjUtODIyNi0zMjUzODEwNDE4NGU%3d",
-      highlights: [
-        "One-to-One Meetings",
-        "Technology Showcase",
-        "Expert-Led Sessions",
-      ],
-    },
-    {
-      id: 2,
-      title: "Identity Day",
-      date: "2026-02-10",
-      location: "The Orient Hotel, Jakarta",
-      type: "Exclusive Luncheon",
-      attendees: "30+",
-      description:
-        "Identity Day Indonesia is an exclusive executive forum for senior technology and security leaders seeking to elevate identity from a control function into a strategic business enabler. As digital ecosystems grow more complex, this event offers critical insights into the evolution of Identity Governance and Administration (IGA), the rise of machine identities, and the role of identity moderation in ensuring visibility, accountability, and trust. Through expert-led perspectives and peer-level discussions, delegates will gain actionable strategies to strengthen security posture, improve operational efficiency, and build resilient, future-ready identity frameworks that support sustainable business growth.",
-      image:
-        "https://storage.thetehgroup.com/flmngr-prod/images/6949ed1e651f7_identity.webp",
-      registrationStatus: "Open",
-      registrationLink: "https://event.thetehgroup.com/identity-day-indonesia/overview?token=ZT1iZjVmY2ZkOC01OWI5LTRmMDUtOWUyYy1lNjY0Y2U2ZGJhNGI%3d",
-      highlights: ["Networking Lunch", "Exclusive Executive Session"],
-    },
-    {
-      id: 3,
       title: "Nexus Singapore 2026",
       date: "2026-03-11",
-      location: "Mandai Rainforest Resort by Banyan Tree",
+      location: "Mandai Rainforest Resort by Banyan Tree, Singapore",
       type: "Conference",
       attendees: "200+",
       description:
@@ -105,10 +105,50 @@ const UpcomingEvents = () => {
       highlights: ["Conference", "Exclusive Executive Session"],
     },
     {
+      id: 2,
+      title: "Maximizing Efficiency: Innovations in Operations",
+      date: "2026-02-25",
+      location: "The St. Regis Hotel Bangkok, Thailand",
+      type: "Roundtable Luncheon",
+      attendees: "20+",
+      description:
+        "Join us for an intimate lunch in Bangkok, bringing together leaders from the F&B industry to foster innovations and share insights on enhancing operational efficiency.",
+      image:
+        "https://event.thetehgroup.com/assets/banner-new-a4d86b24.webp",
+      registrationStatus: "Open",
+      registrationLink:
+        "https://event.thetehgroup.com/maximizing-efficiency-innovations-in-operations/overview?token=ZT03ZjQ3ZmQyMi03NzgxLTQzMDQtYjc2ZC0wZDEyMmMyNjVlZGEmcmM9OUJUUFNKS1dGWg%3d%3d",
+      highlights: [
+        "Business Strategy",
+        "Exclusive Luncheon Roundtable",
+        "Exclusive Executive Session",
+      ],
+    },
+    {
+      id: 3,
+      title: "Unlock the Power of Trusted Data: Learn, Share, and Apply",
+      date: "2026-03-10",
+      location: "Grand Hyatt Manila, Philippines",
+      type: "Exclusive Luncheon",
+      attendees: "20+",
+      description:
+        "Join us for an exclusive Data Leadership Luncheon, where it enables organizations to turn master data into a trusted asset by more effectively managing, gathering, sharing, and publishing master data across the business.",
+      image:
+        "https://storage.thetehgroup.com/flmngr-prod/images/696743cf0534e_StiboSystem%20WebPage%2016x9.webp",
+      registrationStatus: "Open",
+      registrationLink:
+        "https://event.thetehgroup.com/unlock-the-power-of-trusted-data-learn-share-and-apply/overview?token=ZT1lMmRmOWQ3NC01YmY2LTQwN2ItOWRhNS1iOTFjMWFhZGNiNGMmcmM9WTlJN1NKQUUxWQ%3d%3d",
+      highlights: [
+        "Business Strategy",
+        "Exclusive Luncheon Roundtable",
+        "Exclusive Executive Session",
+      ],
+    },
+    {
       id: 4,
       title: "Beyond Passwords: Securing the Workforce with Zero Trust – Exclusive Luncheon Roundtable",
       date: "2026-03-12",
-      location: "Pullman Melbourne City Centre - Room 1954",
+      location: "Pullman Melbourne City Centre - Room 1954, Australia",
       type: "Roundtable Luncheon",
       attendees: "20+",
       description:
@@ -126,9 +166,29 @@ const UpcomingEvents = () => {
     },
     {
       id: 5,
+      title: "The Agent Control Room: Orchestrating Agentic AI in Regulated Markets",
+      date: "2026-03-24",
+      location: "The Westin, Jakarta, Indonesia",
+      type: "Exclusive Luncheon",
+      attendees: "25+",
+      description:
+        "Financial institutions are advancing beyond passive GenAI copilots toward Agentic AI systems capable of reasoning, planning, and executing work. However, deploying agents in regulated environments requires more than just intelligence; it requires control.",
+      image:
+        "/images/banners/appian.jpg",
+      registrationStatus: "Open",
+      registrationLink:
+        "https://event.thetehgroup.com/the-agent-control-room-orchestrating-agentic-ai-in-regulated-markets/overview?token=ZT1jODc3M2FjZi0xZDg4LTRkNWQtYTZjZi1lZjhmNDRhM2ZjNzMmcmM9VVQwV1kzQktDMg%3d%3d",
+      highlights: [
+        "Business Strategy",
+        "Exclusive Luncheon Roundtable",
+        "Exclusive Executive Session",
+      ],
+    },
+    {
+      id: 6,
       title: "Tech Fest 2026",
       date: "2026-05-21",
-      location: "Convention Hall, Hong Kong Convention and Exhibition Centre",
+      location: "Convention Hall, Hong Kong Convention and Exhibition Centre, Hong Kong",
       type: "Conference",
       attendees: "2000+",
       description:
