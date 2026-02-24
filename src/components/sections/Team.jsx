@@ -15,7 +15,7 @@ const teamMembers = [
   {
     name: "Zen Lai",
     role: "Principal Partner",
-    image: "/images/teams/zen-lai.jpg",
+    image: "/images/teams/Zen.jpg",
     gradient: "from-cyan-500 to-blue-500",
     email: "Zen@thetehgroup.com",
     linkedin: "https://www.linkedin.com/in/zen-lai-b0242216a/",
