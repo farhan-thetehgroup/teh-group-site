@@ -8,7 +8,7 @@ const clients = [
   { name: "Google Cloud", logo: "/images/sponsors/googlecloud.png", url: "https://cloud.google.com/" },
   { name: "IBM", logo: "/images/sponsors/ibm.png", url: "https://www.ibm.com/" },
   { name: "PwC", logo: "/images/sponsors/pwc.svg", url: "https://www.pwc.com/" },
-  { name: "PayPal", logo: "/images/sponsors/paypal.webp", url: "https://www.paypal.com/" },
+  { name: "Sailpoint", logo: "/images/sponsors/sailpoint.png", url: "https://www.sailpoint.com/" },
   { name: "ServiceNow", logo: "/images/sponsors/servicenow.png", url: "https://www.servicenow.com/" },
   { name: "Cloudflare", logo: "/images/sponsors/cloudflare.png", url: "https://www.cloudflare.com/" },
   { name: "Fortinet", logo: "/images/sponsors/fortinet.png", url: "https://www.fortinet.com/" },
