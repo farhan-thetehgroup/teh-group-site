@@ -91,125 +91,105 @@ const UpcomingEvents = () => {
     // },
     {
       id: 1,
-      title: "Nexus Singapore 2026",
-      date: "2026-03-11",
-      location: "Mandai Rainforest Resort by Banyan Tree, Singapore",
+      title: "Nexus Malaysia 2026",
+      date: "2026-06-10",
+      location: "Le Méridien Kuala Lumpur, Malaysia",
       type: "Conference",
       attendees: "200+",
       description:
-        "Join us for Nexus Singapore 2026, an exclusive executive retreat that redefines the traditional conference experience by uniting the most influential leaders in cybersecurity, AI  and digital innovation for intimate, high-level discussions, curated thought leadership, and actionable outcomes. Designed to foster candor, collaboration, and meaningful partnerships, Nexus blends strategic dialogue with structured buyer-seller engagements, creating both transformative insights and tangible business opportunities. It is a rare environment where leadership meets opportunity-exclusive, purposeful, and built to deliver results This exclusive event will bring together senior executives, technology leaders, and innovators to explore the latest trends, address real-world challenges, and build strategic connections that shape the future of AI and Cybersecurity.",
+        "Join us for Nexus Malaysia 2026, an exclusive executive retreat that redefines the traditional conference experience by uniting the most influential leaders in cybersecurity, AI  and digital innovation for intimate, high-level discussions, curated thought leadership, and actionable outcomes. Designed to foster candor, collaboration, and meaningful partnerships, Nexus blends strategic dialogue with structured buyer-seller engagements, creating both transformative insights and tangible business opportunities. It is a rare environment where leadership meets opportunity-exclusive, purposeful, and built to deliver results This exclusive event will bring together senior executives, technology leaders, and innovators to explore the latest trends, address real-world challenges, and build strategic connections that shape the future of AI and Cybersecurity.",
       image:
         "https://storage.thetehgroup.com/flmngr-prod/images/68d2499badd26_FA 16x9 AI Nexus APAC 2026 Landing Page.webp",
       registrationStatus: "Open",
-      registrationLink: "https://event.thetehgroup.com/-nexus-singapore-2026/overview?token=ZT1kNmZmMTFiMC1iZTFhLTQ0NjEtOWY3OS05MjczMmY0MmY4ZjU%3d",
+      registrationLink: "https://event.thetehgroup.com/nexus-malaysia-2026/overview?token=ZT04Yjk0NDI1Yy00MzU2LTRmZGUtOTQ1My0yMzU0NTJlY2VkZDQmcmM9Wkw5V1lVTktRSQ%3d%3d",
       highlights: ["Conference", "Exclusive Executive Session"],
     },
-    {
-      id: 2,
-      title: "Maximizing Efficiency: Innovations in Operations",
-      date: "2026-02-25",
-      location: "The St. Regis Hotel Bangkok, Thailand",
-      type: "Roundtable Luncheon",
-      attendees: "20+",
-      description:
-        "Join us for an intimate lunch in Bangkok, bringing together leaders from the F&B industry to foster innovations and share insights on enhancing operational efficiency.",
-      image:
-        "https://event.thetehgroup.com/assets/banner-new-a4d86b24.webp",
-      registrationStatus: "Open",
-      registrationLink:
-        "https://event.thetehgroup.com/maximizing-efficiency-innovations-in-operations/overview?token=ZT03ZjQ3ZmQyMi03NzgxLTQzMDQtYjc2ZC0wZDEyMmMyNjVlZGEmcmM9OUJUUFNKS1dGWg%3d%3d",
-      highlights: [
-        "Business Strategy",
-        "Exclusive Luncheon Roundtable",
-        "Exclusive Executive Session",
-      ],
-    },
-    {
-      id: 3,
-      title: "Unlock the Power of Trusted Data: Learn, Share, and Apply",
-      date: "2026-03-10",
-      location: "Grand Hyatt Manila, Philippines",
-      type: "Exclusive Luncheon",
-      attendees: "20+",
-      description:
-        "Join us for an exclusive Data Leadership Luncheon, where it enables organizations to turn master data into a trusted asset by more effectively managing, gathering, sharing, and publishing master data across the business.",
-      image:
-        "https://storage.thetehgroup.com/flmngr-prod/images/696743cf0534e_StiboSystem%20WebPage%2016x9.webp",
-      registrationStatus: "Open",
-      registrationLink:
-        "https://event.thetehgroup.com/unlock-the-power-of-trusted-data-learn-share-and-apply/overview?token=ZT1lMmRmOWQ3NC01YmY2LTQwN2ItOWRhNS1iOTFjMWFhZGNiNGMmcmM9WTlJN1NKQUUxWQ%3d%3d",
-      highlights: [
-        "Business Strategy",
-        "Exclusive Luncheon Roundtable",
-        "Exclusive Executive Session",
-      ],
-    },
-    {
-      id: 4,
-      title: "Beyond Passwords: Securing the Workforce with Zero Trust – Exclusive Luncheon Roundtable",
-      date: "2026-03-12",
-      location: "Pullman Melbourne City Centre - Room 1954, Australia",
-      type: "Roundtable Luncheon",
-      attendees: "20+",
-      description:
-        "Join us for an exclusive roundtable luncheon to explore how adopting phishing-resistant authentication can help you strengthen your security posture while delivering a seamless user experience. Together, we’ll unpack the principles of Zero Trust, passwordless access, and modern authentication strategies that leading organisations are leveraging to reduce risk and streamline workforce security.",
-      image:
-        "/images/banners/Exclusive-luncheon.png",
-      registrationStatus: "Open",
-      registrationLink:
-        "https://event.thetehgroup.com/-beyond-passwords-securing-the-workforce-with-zero-trust-exclusive-luncheon-roundtable/overview?token=ZT03YTFlNjc2NC04ZDhlLTQ4NjQtYTFlNy00YmZkNjc0ZTBkMGU%3d",
-      highlights: [
-        "Business Strategy",
-        "Exclusive Luncheon Roundtable",
-        "Exclusive Executive Session",
-      ],
-    },
-    {
-      id: 5,
-      title: "The Agent Control Room: Orchestrating Agentic AI in Regulated Markets",
-      date: "2026-03-24",
-      location: "The Westin, Jakarta, Indonesia",
-      type: "Exclusive Luncheon",
-      attendees: "25+",
-      description:
-        "Financial institutions are advancing beyond passive GenAI copilots toward Agentic AI systems capable of reasoning, planning, and executing work. However, deploying agents in regulated environments requires more than just intelligence; it requires control.",
-      image:
-        "/images/banners/appian.jpg",
-      registrationStatus: "Open",
-      registrationLink:
-        "https://event.thetehgroup.com/the-agent-control-room-orchestrating-agentic-ai-in-regulated-markets/overview?token=ZT1jODc3M2FjZi0xZDg4LTRkNWQtYTZjZi1lZjhmNDRhM2ZjNzMmcmM9VVQwV1kzQktDMg%3d%3d",
-      highlights: [
-        "Business Strategy",
-        "Exclusive Luncheon Roundtable",
-        "Exclusive Executive Session",
-      ],
-    },
-    {
-      id: 6,
-      title: "Tech Fest 2026",
-      date: "2026-05-21",
-      location: "Convention Hall, Hong Kong Convention and Exhibition Centre, Hong Kong",
-      type: "Conference",
-      attendees: "2000+",
-      description:
-        "Welcome to the most electrifying tech experience in the city. Tech Fest Hong Kong unites over 2,000+ senior tech leaders, visionary executives and bold decision-makers - powered by the teams behind Cloud Forum (a KORNERSTONE event), Revive Tech Asia, and Cyber Attack (a TEH Group event).",
-      image:
-        "/images/banners/tech-fest.png",
-      video: "https://files.thetehgroup.com/hktechfest/Video/HIGHLIGHT-TECHFEST.mp4",
-      registrationStatus: "Open",
-      registrationLink:
-        "https://event.thetehgroup.com/tech-fest-2026/overview?token=ZT0wZWFhMmU3YS0yNmM0LTRjMWQtODE4YS00NDgyMThhOTQ1OGI%3d",
-      highlights: [
-        "One-to-One Business Matchmaking",
-        "2000+ Senior Tech Leaders",
-        "Workshops",
-        "Roundtable Discussions",
-        "Exhibition",
-        "Awards Celebration",
-        "Conferences",
-        "World Cafe Dialogue"
-      ],
-    },
+    // {
+    //   id: 2,
+    //   title: "Cloudflare Immerse Hong Kong 2026",
+    //   date: "2026-06-10",
+    //   location: "Grand Hyatt Manila, Philippines",
+    //   type: "Exclusive Luncheon",
+    //   attendees: "20+",
+    //   description:
+    //     "Join us for an exclusive Data Leadership Luncheon, where it enables organizations to turn master data into a trusted asset by more effectively managing, gathering, sharing, and publishing master data across the business.",
+    //   image:
+    //     "https://storage.thetehgroup.com/flmngr-prod/images/696743cf0534e_StiboSystem%20WebPage%2016x9.webp",
+    //   registrationStatus: "Open",
+    //   registrationLink:
+    //     "https://event.thetehgroup.com/unlock-the-power-of-trusted-data-learn-share-and-apply/overview?token=ZT1lMmRmOWQ3NC01YmY2LTQwN2ItOWRhNS1iOTFjMWFhZGNiNGMmcmM9WTlJN1NKQUUxWQ%3d%3d",
+    //   highlights: [
+    //     "Business Strategy",
+    //     "Exclusive Luncheon Roundtable",
+    //     "Exclusive Executive Session",
+    //   ],
+    // },
+    // {
+    //   id: 4,
+    //   title: "Beyond Passwords: Securing the Workforce with Zero Trust – Exclusive Luncheon Roundtable",
+    //   date: "2026-03-12",
+    //   location: "Pullman Melbourne City Centre - Room 1954, Australia",
+    //   type: "Roundtable Luncheon",
+    //   attendees: "20+",
+    //   description:
+    //     "Join us for an exclusive roundtable luncheon to explore how adopting phishing-resistant authentication can help you strengthen your security posture while delivering a seamless user experience. Together, we’ll unpack the principles of Zero Trust, passwordless access, and modern authentication strategies that leading organisations are leveraging to reduce risk and streamline workforce security.",
+    //   image:
+    //     "/images/banners/Exclusive-luncheon.png",
+    //   registrationStatus: "Open",
+    //   registrationLink:
+    //     "https://event.thetehgroup.com/-beyond-passwords-securing-the-workforce-with-zero-trust-exclusive-luncheon-roundtable/overview?token=ZT03YTFlNjc2NC04ZDhlLTQ4NjQtYTFlNy00YmZkNjc0ZTBkMGU%3d",
+    //   highlights: [
+    //     "Business Strategy",
+    //     "Exclusive Luncheon Roundtable",
+    //     "Exclusive Executive Session",
+    //   ],
+    // },
+    // {
+    //   id: 5,
+    //   title: "The Agent Control Room: Orchestrating Agentic AI in Regulated Markets",
+    //   date: "2026-03-24",
+    //   location: "The Westin, Jakarta, Indonesia",
+    //   type: "Exclusive Luncheon",
+    //   attendees: "25+",
+    //   description:
+    //     "Financial institutions are advancing beyond passive GenAI copilots toward Agentic AI systems capable of reasoning, planning, and executing work. However, deploying agents in regulated environments requires more than just intelligence; it requires control.",
+    //   image:
+    //     "/images/banners/appian.jpg",
+    //   registrationStatus: "Open",
+    //   registrationLink:
+    //     "https://event.thetehgroup.com/the-agent-control-room-orchestrating-agentic-ai-in-regulated-markets/overview?token=ZT1jODc3M2FjZi0xZDg4LTRkNWQtYTZjZi1lZjhmNDRhM2ZjNzMmcmM9VVQwV1kzQktDMg%3d%3d",
+    //   highlights: [
+    //     "Business Strategy",
+    //     "Exclusive Luncheon Roundtable",
+    //     "Exclusive Executive Session",
+    //   ],
+    // },
+    // {
+    //   id: 6,
+    //   title: "Tech Fest 2026",
+    //   date: "2026-05-21",
+    //   location: "Convention Hall, Hong Kong Convention and Exhibition Centre, Hong Kong",
+    //   type: "Conference",
+    //   attendees: "2000+",
+    //   description:
+    //     "Welcome to the most electrifying tech experience in the city. Tech Fest Hong Kong unites over 2,000+ senior tech leaders, visionary executives and bold decision-makers - powered by the teams behind Cloud Forum (a KORNERSTONE event), Revive Tech Asia, and Cyber Attack (a TEH Group event).",
+    //   image:
+    //     "/images/banners/tech-fest.png",
+    //   video: "https://files.thetehgroup.com/hktechfest/Video/HIGHLIGHT-TECHFEST.mp4",
+    //   registrationStatus: "Open",
+    //   registrationLink:
+    //     "https://event.thetehgroup.com/tech-fest-2026/overview?token=ZT0wZWFhMmU3YS0yNmM0LTRjMWQtODE4YS00NDgyMThhOTQ1OGI%3d",
+    //   highlights: [
+    //     "One-to-One Business Matchmaking",
+    //     "2000+ Senior Tech Leaders",
+    //     "Workshops",
+    //     "Roundtable Discussions",
+    //     "Exhibition",
+    //     "Awards Celebration",
+    //     "Conferences",
+    //     "World Cafe Dialogue"
+    //   ],
+    // },
   ];
 
   const getDaysLeft = (eventDate) => {
