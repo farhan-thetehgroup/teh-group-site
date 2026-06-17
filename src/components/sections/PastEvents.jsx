@@ -149,6 +149,65 @@ const pastEvents = [
   },
   {
     id: 6,
+    title: "Nexus Manila 2026",
+    date: "April 23, 2026",
+    location: "Lanson Place, Manila, Philippines",
+    attendees: "300+",
+    description:
+      "Join us for Nexus Philippines 2026, a premier gathering of leading minds in Artificial Intelligence and Cybersecurity from across Asia.",
+    image:
+      "https://storage.thetehgroup.com/flmngr-prod/images/69523352afd3f_Web Banner 1x1 Nexus.webp",
+    gallery: [
+      "/images/Documentations/Nexus-Manila-2026/gallery-1.jpg",
+      "/images/Documentations/Nexus-Manila-2026/gallery-2.jpg",
+      "/images/Documentations/Nexus-Manila-2026/gallery-3.jpg",
+      "/images/Documentations/Nexus-Manila-2026/gallery-4.jpg",
+      "/images/Documentations/Nexus-Manila-2026/gallery-5.jpg",
+      "/images/Documentations/Nexus-Manila-2026/gallery-6.jpg",
+    ],
+    socialLink:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7470726933585027072",
+  },
+  {
+    id: 7,
+    title: "Tech Fest 2026",
+    date: "May 21, 2026",
+    location: "Convention Hall, HKCEC, Hong Kong",
+    attendees: "1500+",
+    description:
+      "The Tech Fest Summit Hong Kong brings together IT executives, innovators, and industry experts to explore digital transformation, Agentic AI, cloud transformation, cybersecurity, and emerging technologies.",
+    image:
+      "https://storage.thetehgroup.com/flmngr-prod/images/69e58f05f2718_Web-Banner-TechFest-1200x360.jpg",
+    gallery: [
+      "/images/Documentations/Tech-Fest-2026/gallery-1.jpg",
+      "/images/Documentations/Tech-Fest-2026/gallery-2.jpg",
+      "/images/Documentations/Tech-Fest-2026/gallery-3.jpg",
+      "/images/Documentations/Tech-Fest-2026/gallery-4.jpg",
+      "/images/Documentations/Tech-Fest-2026/gallery-5.jpg",
+    ],
+    socialLink:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7464851369695281152",
+  },
+  {
+    id: 8,
+    title: "Nexus Malaysia 2026",
+    date: "June 10, 2026",
+    location: "Le Méridien Kuala Lumpur, Malaysia",
+    attendees: "300+",
+    description:
+      "Join us for Nexus Malaysia 2026, a premier gathering of leading minds in Artificial Intelligence and Cybersecurity from across Asia.",
+    image:
+      "https://storage.thetehgroup.com/flmngr-prod/images/6952333624cb6_Web Banner 1x1 Nexus.webp",
+    gallery: [
+      "/images/Documentations/Nexus-Malaysia-2026/gallery-1.jpg",
+      "/images/Documentations/Nexus-Malaysia-2026/gallery-2.jpg",
+      "/images/Documentations/Nexus-Malaysia-2026/gallery-3.jpg",
+    ],
+    socialLink:
+      "https://www.linkedin.com/feed/update/urn:li:activity:7471086902142599170",
+  },
+  {
+    id: 9,
     title: "More Engagements Ahead",
     date: "Coming Soon",
     location: "Indonesia | 100% | APAC",
