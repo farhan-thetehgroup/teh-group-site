@@ -91,18 +91,83 @@ const UpcomingEvents = () => {
     // },
     {
       id: 1,
-      title: "Nexus Malaysia 2026",
-      date: "2026-06-10",
-      location: "Le Méridien Kuala Lumpur, Malaysia",
-      type: "Conference",
-      attendees: "200+",
+      title: "信頼を築く：日本におけるAIガバナンスの新時代を読み解く",
+      date: "2026-07-02",
+      location: "Grand Hyatt Tokyo, Japan",
+      type: "Executive Lunch",
+      attendees: "Limited",
       description:
-        "Join us for Nexus Malaysia 2026, an exclusive executive retreat that redefines the traditional conference experience by uniting the most influential leaders in cybersecurity, AI  and digital innovation for intimate, high-level discussions, curated thought leadership, and actionable outcomes. Designed to foster candor, collaboration, and meaningful partnerships, Nexus blends strategic dialogue with structured buyer-seller engagements, creating both transformative insights and tangible business opportunities. It is a rare environment where leadership meets opportunity-exclusive, purposeful, and built to deliver results This exclusive event will bring together senior executives, technology leaders, and innovators to explore the latest trends, address real-world challenges, and build strategic connections that shape the future of AI and Cybersecurity.",
+        "Join OneTrust and an exclusive group of data and security leaders for an executive lunch session in Tokyo exploring AI governance, trusted data, continuous governance, and platform unity in an AI-native economy.",
       image:
-        "https://storage.thetehgroup.com/flmngr-prod/images/68d2499badd26_FA 16x9 AI Nexus APAC 2026 Landing Page.webp",
+        "https://storage.thetehgroup.com/flmngr-prod/images/6a19051ff2965_OneTrust JP banner (in Japanese).jpg",
       registrationStatus: "Open",
-      registrationLink: "https://event.thetehgroup.com/nexus-malaysia-2026/overview?token=ZT04Yjk0NDI1Yy00MzU2LTRmZGUtOTQ1My0yMzU0NTJlY2VkZDQmcmM9Wkw5V1lVTktRSQ%3d%3d",
-      highlights: ["Conference", "Exclusive Executive Session"],
+      registrationLink:
+        "https://event.thetehgroup.com/ai/overview?token=ZT04M2M2ZWUwZC1jMmQ3LTQwNDItOTkzMi03NDQxMDBmMTMzYTcmcmM9TVpBRU02NkdBSA%3d%3d",
+      highlights: [
+        "AI Governance",
+        "Executive Lunch",
+        "Live Solution Demo",
+      ],
+    },
+    {
+      id: 2,
+      title: "Putting AI to Work: Building the Connected, Intelligent Enterprise",
+      date: "2026-07-08",
+      location: "Jakarta, Indonesia",
+      type: "Executive Session",
+      attendees: "Limited",
+      description:
+        "Explore how ServiceNow and Google Cloud help enterprises move from isolated AI experiments to enterprise-wide AI execution by connecting AI, data, workflows, employees, and customers on a trusted platform.",
+      image:
+        "https://storage.thetehgroup.com/flmngr-prod/images/6a2a350930a41_Copy of Untitled Design (2).jpg",
+      registrationStatus: "Open",
+      registrationLink:
+        "https://event.thetehgroup.com/putting-ai-to-work-building-the-connected-intelligent-enterprise/overview?token=ZT1kMjVmYjM5MS0yZjRjLTQ1OTctODY3My1iODAzY2E3MDU4YTgmcmM9VTBIQjY1R0VLUA%3d%3d",
+      highlights: [
+        "Enterprise AI",
+        "Connected Workflows",
+        "Responsible AI",
+      ],
+    },
+    {
+      id: 3,
+      title: "Exclusive Executive Luncheon: Transforming Operations with Service Robotics",
+      date: "2026-07-09",
+      location: "Nuanza Hotel & Convention, Cikarang, Indonesia",
+      type: "Executive Luncheon",
+      attendees: "Limited",
+      description:
+        "An exclusive gathering for operations and manufacturing decision-makers to explore how robotics and intelligent automation can improve productivity, optimize resources, and drive operational excellence.",
+      image:
+        "https://storage.thetehgroup.com/flmngr-prod/images/6a2a7c2ba4ec9_pudu Banner 2_Artboard 1.webp",
+      registrationStatus: "Open",
+      registrationLink:
+        "https://event.thetehgroup.com/exclusive-executive-luncheon-transforming-operations-with-service-robotics/overview?token=ZT05YjY1ZTM3Yi04MGI0LTRjYmMtYWRhOC03ZDlhZDE1OGE3ZDUmcmM9SjRCUVVEWTEySw%3d%3d",
+      highlights: [
+        "Service Robotics",
+        "Intelligent Automation",
+        "Operational Excellence",
+      ],
+    },
+    {
+      id: 4,
+      title: "Nexus FT - BFSI TECH, AI & RISK for Digital Economy",
+      date: "2026-09-16",
+      location: "InterContinental Bangkok, Thailand",
+      type: "Conference",
+      attendees: "300+",
+      description:
+        "Nexus FT 2026 brings together financial services leaders, technology decision-makers, and innovators to explore AI-driven growth, intelligent automation, digital customer experience, scalable payment infrastructure, and crypto adoption.",
+      image:
+        "https://storage.thetehgroup.com/flmngr-prod/images/69de13ff4b53f_Banner 1 Nexus FT-01.webp",
+      registrationStatus: "Open",
+      registrationLink:
+        "https://event.thetehgroup.com/-nexus-ft-bfsi-tech-ai-risk-for-digital-economy/overview?token=ZT0yZDUwMTRhZS04MzA5LTRkMTMtYTYzZi04ZWQ0NGFmZjBlODkmcmM9QjBKNUoyNU4xNw%3d%3d",
+      highlights: [
+        "One-to-One Meetings",
+        "Technology Showcase",
+        "Expert-Led Sessions",
+      ],
     },
     // {
     //   id: 2,
