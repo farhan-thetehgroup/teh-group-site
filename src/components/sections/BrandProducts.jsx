@@ -98,7 +98,8 @@ const products = [
       "Tech Fest is a premier, large-scale technology event designed to unite thousands of senior leaders and decision-makers from across industries. Powered by leading organizers like Cloud Forum (Kornerstone), Revive Tech Asia, and Cyber Attack (TEH Group), the event serves as a strategic platform for shaping the future of business through advancements in AI, cloud technologies, and cybersecurity. It stands as a key convergence point for innovation, collaboration, and high-level discussions driving the next era of digital transformation.",
     format:
       "Conference • Workshops • Roundtable Discussions • Exhibition • 1 to 1 Business Matchmaking • Awards Celebration",
-    video: "https://files.thetehgroup.com/hktechfest/Video/HIGHLIGHT-TECHFEST.mp4",
+    video:
+      "https://files.thetehgroup.com/hktechfest/Video/HIGHLIGHT-TECHFEST.mp4",
     poster: "/images/banners/tech-fest.png",
     keyFeatures: [
       {
@@ -129,41 +130,42 @@ const products = [
     logoSrc: "/images/products/teh-fest-logo.png",
   },
   {
-    name: "Nexus Club",
+    name: "Nexus Club Asia",
     slug: "nexus-club",
-    ctaUrl: "https://nexusclub.thetehgroup.com",
+    ctaUrl: "https://nexusclubasia.com/",
     highlight:
-      "Nexus Club is a lifestyle - driven community, supported by Teh Group, that connects IT professionals across Asia",
+      "A private circle of CTOs, engineers, and founders meeting over curated golf at Asia’s most storied courses.",
     description:
-      "Nexus Club is a lifestyle - driven community, supported by Teh Group, that connects IT professionals across Asia-including senior software engineers, fullstack developers, tech leads, infrastructure specialists, and more-through shared social experiences beyond work. Our focus is on building genuine relationships through informal meetups and recreational activities like golf, hiking, paddle, tennis, billiards, cricket, and badminton. Not as courses or competitions, but as opportunities to unwind, laugh, and connect. At Nexus Club, we believe that the strongest professional networks are built in real moments, where people can engage authentically beyond screens and boardrooms.",
-    format: "Golf • Hiking • Paddle • Tennis • Badminton",
+      "Supported by Teh Group, Nexus Club Asia brings technology leaders together through curated golf experiences and exclusive gatherings across Asia. It is a relaxed, refined space where genuine conversations become collaborations and professional networks grow into lasting partnerships.",
+    format:
+      "Curated Golf • Exclusive Gatherings • Executive Networking • Asia’s Finest Courses",
     keyFeatures: [
       {
         icon: "M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z",
         color: "blue",
-        title: "Executive Networking",
-        desc: "Direct access to C-level executives and key decision makers",
+        title: "Technology Leader Community",
+        desc: "A private circle of CTOs, engineers, founders, and technology decision-makers",
       },
       {
         icon: "M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z",
         color: "green",
-        title: "Informal Social Meetups",
-        desc: "Regular gatherings that encourage members to relax, unwind, and connect naturally outside of traditional work environments",
+        title: "Curated Golf Experiences",
+        desc: "Thoughtfully hosted gatherings at distinguished golf courses across Asia",
       },
       {
         icon: "M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z",
         color: "cyan",
-        title: "Authentic, Relationship-Focused Engagements",
-        desc: "Designed to build genuine connections. Not formal networking, but real conversations and meaningful interactions.",
+        title: "Authentic Connections",
+        desc: "Relaxed time on the course creates room for trust, friendship, and opportunity to grow naturally",
       },
       {
         icon: "M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z",
         color: "yellow",
-        title: "Non-Competitive, Experience-Led Approach",
-        desc: "Activities are not held as tournaments or classes, but as casual opportunities to bond, laugh, and enjoy time together.",
+        title: "Pan-Asia Community",
+        desc: "Exclusive gatherings that connect like-minded leaders across the region",
       },
     ],
-    logoSrc: "/images/products/nexus-club-logo.png",
+    logoSrc: "/images/products/nexus-club-asia-logo.png",
   },
 ];
 
@@ -259,23 +261,28 @@ export default function BrandProducts() {
       ref={sectionRef}
       className="brand-products-section relative overflow-hidden bg-gradient-to-b from-black via-slate-950/40 to-black"
       style={{
-        zIndex: 'var(--z-section, 1)',
-        isolation: 'isolate',
-        willChange: 'auto'
-      }}>
-      <div className="flex w-[400vw]" style={{ willChange: 'transform' }}>
+        zIndex: "var(--z-section, 1)",
+        isolation: "isolate",
+        willChange: "auto",
+      }}
+    >
+      <div className="flex w-[400vw]" style={{ willChange: "transform" }}>
         {products.map((product, index) => (
           <div
             key={product.slug}
             className="brand-product-panel w-screen h-screen flex items-center justify-center relative px-4"
             style={{
               background: `linear-gradient(135deg, ${
-                index === 0 ? "rgba(6, 78, 59, 0.3)"
-                : index === 1 ? "rgba(8, 51, 68, 0.3)"
-                : index === 2 ? "rgba(23, 37, 84, 0.3)"
-                : "rgba(76, 29, 149, 0.3)"
+                index === 0
+                  ? "rgba(6, 78, 59, 0.3)"
+                  : index === 1
+                    ? "rgba(8, 51, 68, 0.3)"
+                    : index === 2
+                      ? "rgba(23, 37, 84, 0.3)"
+                      : "rgba(76, 29, 149, 0.3)"
               }, transparent)`,
-            }}>
+            }}
+          >
             <div className="product-content max-w-4xl px-2 sm:px-4 md:px-8 text-center">
               {/* OPTIMIZED: Reduced blur layers from 3 to 1 */}
               <div className="mb-8 sm:mb-10 md:mb-12 flex justify-center">
@@ -284,13 +291,13 @@ export default function BrandProducts() {
                     className="absolute inset-0 -m-8 md:-m-12 rounded-full blur-2xl opacity-60"
                     style={{
                       background: `linear-gradient(45deg, ${
-                        index === 0 ?
-                          "rgba(16, 185, 129, 0.4), rgba(6, 182, 212, 0.4)"
-                        : index === 1 ?
-                          "rgba(6, 182, 212, 0.4), rgba(59, 130, 246, 0.4)"
-                        : index === 2 ?
-                          "rgba(59, 130, 246, 0.4), rgba(168, 85, 247, 0.4)"
-                        : "rgba(168, 85, 247, 0.4), rgba(236, 72, 153, 0.4)"
+                        index === 0
+                          ? "rgba(16, 185, 129, 0.4), rgba(6, 182, 212, 0.4)"
+                          : index === 1
+                            ? "rgba(6, 182, 212, 0.4), rgba(59, 130, 246, 0.4)"
+                            : index === 2
+                              ? "rgba(59, 130, 246, 0.4), rgba(168, 85, 247, 0.4)"
+                              : "rgba(255, 244, 224, 0.9), rgba(229, 190, 154, 0.72)"
                       }`,
                     }}
                   />
@@ -303,10 +310,13 @@ export default function BrandProducts() {
                       className="relative z-10 w-full h-full object-contain"
                       style={{
                         filter: `drop-shadow(0 0 30px ${
-                          index === 0 ? "rgba(16, 185, 129, 0.5)"
-                          : index === 1 ? "rgba(6, 182, 212, 0.5)"
-                          : index === 2 ? "rgba(59, 130, 246, 0.5)"
-                          : "rgba(168, 85, 247, 0.5)"
+                          index === 0
+                            ? "rgba(16, 185, 129, 0.5)"
+                            : index === 1
+                              ? "rgba(6, 182, 212, 0.5)"
+                              : index === 2
+                                ? "rgba(59, 130, 246, 0.5)"
+                                : "rgba(255, 235, 204, 0.85)"
                         })`,
                       }}
                       loading={index === 0 ? "eager" : "lazy"}
@@ -327,13 +337,15 @@ export default function BrandProducts() {
                   href={product.ctaUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="w-full sm:w-auto px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 md:py-4 text-sm sm:text-base md:text-md font-semibold rounded-full text-slate-950 bg-gradient-to-r from-emerald-400 to-cyan-400 text-center transition-all duration-300 hover:from-cyan-400 hover:to-emerald-400 hover:shadow-[0_0_30px_rgba(16,185,129,0.5)]">
+                  className="w-full sm:w-auto px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 md:py-4 text-sm sm:text-base md:text-md font-semibold rounded-full text-slate-950 bg-gradient-to-r from-emerald-400 to-cyan-400 text-center transition-all duration-300 hover:from-cyan-400 hover:to-emerald-400 hover:shadow-[0_0_30px_rgba(16,185,129,0.5)]"
+                >
                   Visit Website
                 </a>
                 <button
                   type="button"
                   onClick={() => setSelectedProduct(product)}
-                  className="w-full sm:w-auto px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 md:py-4 text-sm sm:text-base md:text-md font-semibold rounded-full border-2 border-white/20 text-white hover:border-emerald-400/70 hover:text-emerald-200 hover:bg-white/5 transition-all duration-300">
+                  className="w-full sm:w-auto px-6 sm:px-8 md:px-10 py-2.5 sm:py-3 md:py-4 text-sm sm:text-base md:text-md font-semibold rounded-full border-2 border-white/20 text-white hover:border-emerald-400/70 hover:text-emerald-200 hover:bg-white/5 transition-all duration-300"
+                >
                   View Details
                 </button>
               </div>
@@ -347,19 +359,21 @@ export default function BrandProducts() {
           <button
             key={product.slug}
             className={`group relative text-left text-xs tracking-[0.3em] uppercase transition-all duration-500 py-2 px-3 rounded-lg ${
-              activeIndex === index ?
-                "text-white font-bold scale-110"
-              : "text-white/40 hover:text-white/70"
-            }`}>
+              activeIndex === index
+                ? "text-white font-bold scale-110"
+                : "text-white/40 hover:text-white/70"
+            }`}
+          >
             {activeIndex === index && (
               <span className="absolute inset-0 bg-gradient-to-r from-emerald-500/20 via-cyan-500/20 to-blue-500/20 rounded-lg blur-xl animate-pulse" />
             )}
             <span
               className={`absolute inset-0 rounded-lg transition-all duration-500 ${
-                activeIndex === index ?
-                  "border-2 border-emerald-400/60 shadow-[0_0_20px_rgba(16,185,129,0.4)]"
-                : "border border-white/10 group-hover:border-emerald-400/30"
-              }`}>
+                activeIndex === index
+                  ? "border-2 border-emerald-400/60 shadow-[0_0_20px_rgba(16,185,129,0.4)]"
+                  : "border border-white/10 group-hover:border-emerald-400/30"
+              }`}
+            >
               {activeIndex === index && (
                 <span className="absolute inset-0 rounded-lg bg-gradient-to-br from-emerald-950/50 via-cyan-950/30 to-blue-950/50" />
               )}

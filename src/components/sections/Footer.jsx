@@ -14,8 +14,8 @@ const Footer = () => {
           link: "https://ai-nexus.thetehgroup.com",
         },
         {
-          name: "NexusClub",
-          link: "https://nexusclub.thetehgroup.com",
+          name: "Nexus Club Asia",
+          link: "https://nexusclubasia.com/",
         },
         {
           name: "Nexus APAC",

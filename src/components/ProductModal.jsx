@@ -49,6 +49,7 @@ const ProductModal = ({ product, isOpen, onClose }) => {
 
   // Use product-specific features if available, otherwise use defaults
   const keyFeatures = product?.keyFeatures || defaultKeyFeatures;
+  const usesWarmLogoTreatment = product?.slug === "nexus-club";
 
   useEffect(() => {
     if (isOpen) {
@@ -110,7 +111,8 @@ const ProductModal = ({ product, isOpen, onClose }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           className="fixed inset-0 z-50 flex min-h-screen items-center justify-center p-4 sm:p-6 md:p-8"
-          onClick={onClose}>
+          onClick={onClose}
+        >
           {/* Backdrop */}
           <motion.div
             className="absolute inset-0 bg-black/60 backdrop-blur-xl"
@@ -129,19 +131,22 @@ const ProductModal = ({ product, isOpen, onClose }) => {
             exit={{ scale: 0.98, opacity: 0 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
             onClick={(e) => e.stopPropagation()}
-            className="modal-no-scrollbar relative w-full max-w-3xl max-h-[90vh] flex flex-col overflow-hidden bg-gradient-to-br from-slate-900/70 via-slate-800/60 to-slate-900/70 backdrop-blur-2xl rounded-3xl border border-white/20 shadow-2xl shadow-black/50">
+            className="modal-no-scrollbar relative w-full max-w-3xl max-h-[90vh] flex flex-col overflow-hidden bg-gradient-to-br from-slate-900/70 via-slate-800/60 to-slate-900/70 backdrop-blur-2xl rounded-3xl border border-white/20 shadow-2xl shadow-black/50"
+          >
             {/* Close Button */}
             <motion.button
               onClick={onClose}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="absolute top-4 right-4 z-10 w-10 h-10 rounded-full bg-black/40 hover:bg-black/60 border border-white/10 hover:border-white/30 transition-all duration-200 flex items-center justify-center text-white/80 hover:text-white group"
-              aria-label="Close modal">
+              aria-label="Close modal"
+            >
               <svg
                 className="w-5 h-5 transition-transform group-hover:scale-110"
                 fill="none"
                 stroke="currentColor"
-                viewBox="0 0 24 24">
+                viewBox="0 0 24 24"
+              >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -158,7 +163,8 @@ const ProductModal = ({ product, isOpen, onClose }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 }}
-                className="text-center space-y-6">
+                className="text-center space-y-6"
+              >
                 {/* Large Logo with Glow */}
                 <div className="flex justify-center relative">
                   {/* Animated Glow Rings */}
@@ -166,30 +172,60 @@ const ProductModal = ({ product, isOpen, onClose }) => {
                     initial={{ scale: 0.8, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ delay: 0.15, type: "spring", stiffness: 200 }}
-                    className="relative">
+                    className="relative"
+                  >
                     {/* Outer glow ring */}
-                    <div className="absolute inset-0 -m-8 rounded-full bg-gradient-to-r from-emerald-500/30 via-cyan-500/30 to-blue-500/30 blur-3xl animate-pulse" />
+                    <div
+                      className={`absolute inset-0 -m-8 rounded-full blur-3xl animate-pulse ${
+                        usesWarmLogoTreatment
+                          ? "bg-gradient-to-r from-orange-50/70 via-amber-100/55 to-stone-300/35"
+                          : "bg-gradient-to-r from-emerald-500/30 via-cyan-500/30 to-blue-500/30"
+                      }`}
+                    />
 
                     {/* Middle glow ring */}
-                    <div className="absolute inset-0 -m-4 rounded-full bg-gradient-to-r from-emerald-400/20 via-cyan-400/20 to-blue-400/20 blur-2xl" />
+                    <div
+                      className={`absolute inset-0 -m-4 rounded-full blur-2xl ${
+                        usesWarmLogoTreatment
+                          ? "bg-gradient-to-r from-orange-50/60 via-amber-50/45 to-stone-300/30"
+                          : "bg-gradient-to-r from-emerald-400/20 via-cyan-400/20 to-blue-400/20"
+                      }`}
+                    />
 
                     {/* Logo container */}
                     <motion.div
                       animate={{
-                        boxShadow: [
-                          "0 0 40px rgba(16, 185, 129, 0.3), 0 0 80px rgba(6, 182, 212, 0.2)",
-                          "0 0 60px rgba(16, 185, 129, 0.4), 0 0 100px rgba(6, 182, 212, 0.3)",
-                          "0 0 40px rgba(16, 185, 129, 0.3), 0 0 80px rgba(6, 182, 212, 0.2)",
-                        ],
+                        boxShadow: usesWarmLogoTreatment
+                          ? [
+                              "0 0 36px rgba(255, 244, 224, 0.34), 0 0 72px rgba(229, 190, 154, 0.22)",
+                              "0 0 48px rgba(255, 244, 224, 0.44), 0 0 84px rgba(229, 190, 154, 0.3)",
+                              "0 0 36px rgba(255, 244, 224, 0.34), 0 0 72px rgba(229, 190, 154, 0.22)",
+                            ]
+                          : [
+                              "0 0 40px rgba(16, 185, 129, 0.3), 0 0 80px rgba(6, 182, 212, 0.2)",
+                              "0 0 60px rgba(16, 185, 129, 0.4), 0 0 100px rgba(6, 182, 212, 0.3)",
+                              "0 0 40px rgba(16, 185, 129, 0.3), 0 0 80px rgba(6, 182, 212, 0.2)",
+                            ],
                       }}
                       transition={{
                         duration: 3,
                         repeat: Infinity,
                         ease: "easeInOut",
                       }}
-                      className="relative w-56 h-56 md:w-72 md:h-72 rounded-3xl bg-gradient-to-br from-white/10 to-white/5 border-2 border-white/20 p-8 sm:p-10 md:p-12 flex items-center justify-center backdrop-blur-sm">
+                      className={`relative flex items-center justify-center rounded-3xl border-2 ${
+                        usesWarmLogoTreatment
+                          ? "h-56 w-56 bg-transparent p-8 sm:p-10 md:h-72 md:w-72 md:p-12"
+                          : "w-56 h-56 border-white/20 bg-gradient-to-br from-white/10 to-white/5 p-8 backdrop-blur-sm sm:p-10 md:h-72 md:w-72 md:p-12"
+                      }`}
+                    >
                       {/* Inner glow */}
-                      <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-emerald-500/10 via-transparent to-cyan-500/10" />
+                      <div
+                        className={`absolute inset-0 ${
+                          usesWarmLogoTreatment
+                            ? "rounded-full bg-gradient-to-br from-orange-50/55 via-amber-50/40 to-stone-300/25 blur-2xl"
+                            : "rounded-3xl bg-gradient-to-br from-emerald-500/10 via-transparent to-cyan-500/10"
+                        }`}
+                      />
 
                       {/* Logo */}
                       <motion.img
@@ -205,8 +241,10 @@ const ProductModal = ({ product, isOpen, onClose }) => {
                         alt={`${product.name} logo`}
                         className="relative z-10 w-full h-full object-contain drop-shadow-[0_0_30px_rgba(255,255,255,0.3)]"
                         style={{
-                          imageRendering: 'crisp-edges',
-                          filter: 'brightness(1.1) contrast(1.1)'
+                          imageRendering: "crisp-edges",
+                          filter: usesWarmLogoTreatment
+                            ? "none"
+                            : "brightness(1.1) contrast(1.1)",
                         }}
                       />
 
@@ -247,7 +285,8 @@ const ProductModal = ({ product, isOpen, onClose }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="space-y-3">
+                className="space-y-3"
+              >
                 <h3 className="text-sm md:text-md uppercase tracking-[0.4em] text-emerald-300 font-semibold">
                   About
                 </h3>
@@ -262,7 +301,8 @@ const ProductModal = ({ product, isOpen, onClose }) => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.25 }}
-                  className="space-y-3">
+                  className="space-y-3"
+                >
                   <h3 className="text-sm md:text-md uppercase tracking-[0.4em] text-emerald-300 font-semibold">
                     Event Highlight Video
                   </h3>
@@ -275,7 +315,8 @@ const ProductModal = ({ product, isOpen, onClose }) => {
                       playsInline
                       muted={isMuted}
                       onPlay={() => setIsPlaying(true)}
-                      onPause={() => setIsPlaying(false)}>
+                      onPause={() => setIsPlaying(false)}
+                    >
                       <source src={product.video} type="video/mp4" />
                     </video>
 
@@ -286,12 +327,14 @@ const ProductModal = ({ product, isOpen, onClose }) => {
                     {!isPlaying && (
                       <button
                         onClick={handlePlayPause}
-                        className="absolute inset-0 flex items-center justify-center pointer-events-auto">
+                        className="absolute inset-0 flex items-center justify-center pointer-events-auto"
+                      >
                         <div className="w-16 h-16 rounded-full bg-emerald-500/90 backdrop-blur-sm flex items-center justify-center transform hover:scale-110 transition-transform duration-300 shadow-2xl">
                           <svg
                             className="w-8 h-8 text-white ml-1"
                             fill="currentColor"
-                            viewBox="0 0 24 24">
+                            viewBox="0 0 24 24"
+                          >
                             <path d="M8 5v14l11-7z" />
                           </svg>
                         </div>
@@ -303,13 +346,15 @@ const ProductModal = ({ product, isOpen, onClose }) => {
                       <button
                         className="absolute top-3 right-3 z-20 w-10 h-10 rounded-full bg-black/80 backdrop-blur-md border-2 border-emerald-400/70 flex items-center justify-center hover:bg-emerald-500 hover:scale-110 transition-all duration-300 group/sound shadow-lg pointer-events-auto"
                         onClick={handleToggleMute}
-                        aria-label={isMuted ? "Unmute video" : "Mute video"}>
+                        aria-label={isMuted ? "Unmute video" : "Mute video"}
+                      >
                         {isMuted ? (
                           <svg
                             className="w-5 h-5 text-emerald-400 group-hover/sound:text-white transition-colors"
                             fill="none"
                             stroke="currentColor"
-                            viewBox="0 0 24 24">
+                            viewBox="0 0 24 24"
+                          >
                             <path
                               strokeLinecap="round"
                               strokeLinejoin="round"
@@ -328,7 +373,8 @@ const ProductModal = ({ product, isOpen, onClose }) => {
                             className="w-5 h-5 text-emerald-400 group-hover/sound:text-white transition-colors"
                             fill="none"
                             stroke="currentColor"
-                            viewBox="0 0 24 24">
+                            viewBox="0 0 24 24"
+                          >
                             <path
                               strokeLinecap="round"
                               strokeLinejoin="round"
@@ -357,7 +403,8 @@ const ProductModal = ({ product, isOpen, onClose }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.25 }}
-                className="space-y-3">
+                className="space-y-3"
+              >
                 <h3 className="text-sm md:text-md uppercase tracking-[0.4em] text-emerald-300 font-semibold">
                   Experience Format
                 </h3>
@@ -368,7 +415,8 @@ const ProductModal = ({ product, isOpen, onClose }) => {
                       initial={{ opacity: 0, scale: 0.8 }}
                       animate={{ opacity: 1, scale: 1 }}
                       transition={{ delay: 0.3 + index * 0.05 }}
-                      className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-gray-200 hover:bg-white/10 hover:border-emerald-400/30 transition-all duration-200">
+                      className="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-sm text-gray-200 hover:bg-white/10 hover:border-emerald-400/30 transition-all duration-200"
+                    >
                       {item.trim()}
                     </motion.span>
                   ))}
@@ -380,7 +428,8 @@ const ProductModal = ({ product, isOpen, onClose }) => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.35 }}
-                className="space-y-3">
+                className="space-y-3"
+              >
                 <h3 className="text-sm md:text-md uppercase tracking-[0.4em] text-emerald-300 font-semibold">
                   Key Features
                 </h3>
@@ -391,14 +440,17 @@ const ProductModal = ({ product, isOpen, onClose }) => {
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.4 + index * 0.1 }}
-                      className="flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10">
+                      className="flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10"
+                    >
                       <div
-                        className={`w-12 h-12 rounded-lg bg-${feature.color}-500/20 border border-${feature.color}-500/30 flex items-center justify-center flex-shrink-0`}>
+                        className={`w-12 h-12 rounded-lg bg-${feature.color}-500/20 border border-${feature.color}-500/30 flex items-center justify-center flex-shrink-0`}
+                      >
                         <svg
                           className={`w-6 h-6 text-${feature.color}-400`}
                           fill="none"
                           stroke="currentColor"
-                          viewBox="0 0 24 24">
+                          viewBox="0 0 24 24"
+                        >
                           <path
                             strokeLinecap="round"
                             strokeLinejoin="round"
@@ -426,20 +478,23 @@ const ProductModal = ({ product, isOpen, onClose }) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.7 }}
-              className="sticky bottom-0 z-10 w-full px-6 sm:px-8 py-4 bg-gradient-to-t from-slate-900/90 via-slate-900/70 to-slate-900/50 backdrop-blur-xl border-t border-white/10">
+              className="sticky bottom-0 z-10 w-full px-6 sm:px-8 py-4 bg-gradient-to-t from-slate-900/90 via-slate-900/70 to-slate-900/50 backdrop-blur-xl border-t border-white/10"
+            >
               <motion.a
                 href={product.ctaUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
-                className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-semibold hover:shadow-[0_20px_50px_rgba(16,185,129,0.4)] transition-all duration-300 group">
+                className="w-full inline-flex items-center justify-center gap-2 px-8 py-4 rounded-2xl bg-gradient-to-r from-emerald-500 to-cyan-500 text-white font-semibold hover:shadow-[0_20px_50px_rgba(16,185,129,0.4)] transition-all duration-300 group"
+              >
                 <span>Visit Website</span>
                 <svg
                   className="w-5 h-5 transition-transform group-hover:translate-x-1"
                   fill="none"
                   stroke="currentColor"
-                  viewBox="0 0 24 24">
+                  viewBox="0 0 24 24"
+                >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
