@@ -169,6 +169,108 @@ const UpcomingEvents = () => {
         "Expert-Led Sessions",
       ],
     },
+    {
+      id: 5,
+      title: "Salesforce Sunset Sessions: Unwinding, Networking, & Smarter CRM",
+      date: "2026-08-27",
+      location: "Sofitel Legend Metropole Hanoi, Vietnam",
+      type: "Networking Evening",
+      attendees: "Limited",
+      description:
+        "Unwind, network, and spark smarter growth. Salesforce Sunset Sessions is an exclusive, closed-door evening designed for growth-minded leaders — no dense product pitches, just great food, drinks, and real peer-to-peer conversations on how to turn fragmented customer data into a major competitive advantage.",
+      image:
+        "https://storage.thetehgroup.com/flmngr-prod/images/6a2f8a14cc95b_Gemini_Generated_Image_p2rzujp2rzujp2rz.png",
+      registrationStatus: "Open",
+      registrationLink:
+        "https://event.thetehgroup.com/salesforce-sunset-sessions-unwinding-networking-smarter-crm/registration?token=ZT1iZjZhYTI3NC1hNmFiLTQzNjktOTQ0NS0wODBlYjE2NTMzNjQmcmM9RE1HRDMyNEVTRQ%3d%3d",
+      highlights: [
+        "Executive Networking",
+        "CRM & AI Insights",
+        "Lucky Draw",
+      ],
+    },
+    {
+      id: 6,
+      title: "AI & Next-Gen Storage Summit Singapore",
+      date: "2026-09-08",
+      location: "ParkRoyal Collection Marina Bay, Singapore",
+      type: "Executive Summit",
+      attendees: "Limited",
+      description:
+        "Uncage your data. Overclock your AI. Cut the cloud tax. As enterprise technology and AI initiatives accelerate, yesterday's storage architecture simply can't keep up. Discover high-density, ultra-fast data solutions engineered to eliminate operational bottlenecks, unify hybrid environments, and bring cost predictability back to your tech budget.",
+      image:
+        "https://storage.thetehgroup.com/flmngr-prod/images/6a727d815add8_Gemini_Generated_Image_vb3v3wvb3v3wvb3v.png",
+      registrationStatus: "Open",
+      registrationLink:
+        "https://event.thetehgroup.com/ai-next-gen-storage-summit-singapore/registration?token=ZT0wMTMyMzIwYi1kY2E5LTQ4MWMtYWNiMy00YTM1MDY1MTUxZGImcmM9WFoyQkFQRFpMRA%3d%3d",
+      highlights: [
+        "Next-Gen Storage",
+        "AI-Ready Data",
+        "Cost Optimization",
+      ],
+    },
+    {
+      id: 7,
+      title: "BytePlus AI Day Hong Kong 2026",
+      date: "2026-09-09",
+      location: "Conrad Hong Kong, Hong Kong",
+      type: "Invitation-Only Summit",
+      attendees: "300+",
+      description:
+        "BytePlus AI Day Hong Kong 2026 is BytePlus's premier annual invitation-only event, convening approximately 300 senior business leaders, technology decision-makers, and AI practitioners at Conrad Hong Kong. Under the theme 'Agentic Mind, Creative Frontiers', the event explores how enterprises can move beyond generative AI experimentation to deploy autonomous agentic systems that drive tangible business transformation.",
+      image:
+        "https://storage.thetehgroup.com/flmngr-prod/images/6a69c2ebd8e26_banner.jpg",
+      registrationStatus: "Open",
+      registrationLink:
+        "https://event.thetehgroup.com/byteplus-ai-day-hong-kong-2026/registration?token=ZT05YmFjYmE4OS01ODZhLTQwOTItODQ3NC1hOGU5MjE3NGU0ODUmcmM9VzJWMVZBU0VCVQ%3d%3d",
+      highlights: [
+        "Agentic AI",
+        "Interactive Zones",
+        "Executive Networking",
+      ],
+    },
+    {
+      id: 8,
+      title: "Indonesia Spend & Procurement Summit",
+      date: "2026-09-10",
+      location: "Park Hyatt Jakarta, Indonesia",
+      type: "Executive Summit",
+      attendees: "Limited",
+      description:
+        "Designed exclusively for CPOs and CFOs, this private, peer-driven forum tackles the critical intersection of margin protection, AI adoption, and strategic resilience. Join a curated group of senior leaders to discuss how leading organizations are shifting spend management from a cost-control function to a strategic driver of profitability and growth.",
+      image:
+        "https://storage.thetehgroup.com/flmngr-prod/images/6a54e6163648c_6a3e411152fbd_Gemini_Generated_Image_ayg7mxayg7mxayg7.png",
+      registrationStatus: "Open",
+      registrationLink:
+        "https://event.thetehgroup.com/indonesia-spend-procurement-summit/registration?token=ZT1jM2ViYzk0Ni0zN2YxLTRmZDgtYmE4Zi0yMGE1YzM4MzJhNmQmcmM9TE1VVE9INkZUVQ%3d%3d",
+      highlights: [
+        "CPO & CFO Forum",
+        "AI Adoption Roadmap",
+        "Spend Management",
+      ],
+    },
+    {
+      id: 9,
+      title: "Tech Fest 2027",
+      date: "2027-05-21",
+      location:
+        "Convention Hall, Hong Kong Convention and Exhibition Centre, Hong Kong",
+      type: "Conference",
+      attendees: "2000+",
+      description:
+        "The Tech Fest Summit Hong Kong is a major technology conference at the Hong Kong Convention and Exhibition Centre, bringing together over 2,000 IT executives, innovators, and industry experts to explore the future of digital transformation across Agentic AI, cloud transformation, cybersecurity, and emerging technologies. Organized by KORNERSTONE Institute, Revive Tech Asia, and The TEH Group.",
+      image:
+        "https://storage.thetehgroup.com/flmngr-prod/images/6971a05744fec_Web-Banner-TechFest-1080x750.jpg",
+      registrationStatus: "Open",
+      registrationLink:
+        "https://event.thetehgroup.com/tech-fest-2027/overview?token=ZT1mNDYwZGI3Ny0zMDJiLTQ2MWYtYjYxOS1hYTYyZDc0YTI4MWMmcmM9U0ZZOUlDMTBJRQ%3d%3d",
+      highlights: [
+        "Agentic AI",
+        "Cloud Transformation",
+        "Cybersecurity",
+        "2000+ Senior Tech Leaders",
+      ],
+    },
     // {
     //   id: 2,
     //   title: "Cloudflare Immerse Hong Kong 2026",
