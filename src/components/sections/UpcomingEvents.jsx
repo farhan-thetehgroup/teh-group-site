@@ -89,66 +89,66 @@ const UpcomingEvents = () => {
     //   registrationLink: "https://event.thetehgroup.com/identity-day-indonesia/overview?token=ZT1iZjVmY2ZkOC01OWI5LTRmMDUtOWUyYy1lNjY0Y2U2ZGJhNGI%3d",
     //   highlights: ["Networking Lunch", "Exclusive Executive Session"],
     // },
-    {
-      id: 1,
-      title: "信頼を築く：日本におけるAIガバナンスの新時代を読み解く",
-      date: "2026-07-02",
-      location: "Grand Hyatt Tokyo, Japan",
-      type: "Executive Lunch",
-      attendees: "Limited",
-      description:
-        "Join OneTrust and an exclusive group of data and security leaders for an executive lunch session in Tokyo exploring AI governance, trusted data, continuous governance, and platform unity in an AI-native economy.",
-      image:
-        "https://storage.thetehgroup.com/flmngr-prod/images/6a19051ff2965_OneTrust JP banner (in Japanese).jpg",
-      registrationStatus: "Open",
-      registrationLink:
-        "https://event.thetehgroup.com/ai/overview?token=ZT04M2M2ZWUwZC1jMmQ3LTQwNDItOTkzMi03NDQxMDBmMTMzYTcmcmM9TVpBRU02NkdBSA%3d%3d",
-      highlights: [
-        "AI Governance",
-        "Executive Lunch",
-        "Live Solution Demo",
-      ],
-    },
-    {
-      id: 2,
-      title: "Putting AI to Work: Building the Connected, Intelligent Enterprise",
-      date: "2026-07-08",
-      location: "Jakarta, Indonesia",
-      type: "Executive Session",
-      attendees: "Limited",
-      description:
-        "Explore how ServiceNow and Google Cloud help enterprises move from isolated AI experiments to enterprise-wide AI execution by connecting AI, data, workflows, employees, and customers on a trusted platform.",
-      image:
-        "https://storage.thetehgroup.com/flmngr-prod/images/6a2a350930a41_Copy of Untitled Design (2).jpg",
-      registrationStatus: "Open",
-      registrationLink:
-        "https://event.thetehgroup.com/putting-ai-to-work-building-the-connected-intelligent-enterprise/overview?token=ZT1kMjVmYjM5MS0yZjRjLTQ1OTctODY3My1iODAzY2E3MDU4YTgmcmM9VTBIQjY1R0VLUA%3d%3d",
-      highlights: [
-        "Enterprise AI",
-        "Connected Workflows",
-        "Responsible AI",
-      ],
-    },
-    {
-      id: 3,
-      title: "Exclusive Executive Luncheon: Transforming Operations with Service Robotics",
-      date: "2026-07-09",
-      location: "Nuanza Hotel & Convention, Cikarang, Indonesia",
-      type: "Executive Luncheon",
-      attendees: "Limited",
-      description:
-        "An exclusive gathering for operations and manufacturing decision-makers to explore how robotics and intelligent automation can improve productivity, optimize resources, and drive operational excellence.",
-      image:
-        "https://storage.thetehgroup.com/flmngr-prod/images/6a2a7c2ba4ec9_pudu Banner 2_Artboard 1.webp",
-      registrationStatus: "Open",
-      registrationLink:
-        "https://event.thetehgroup.com/exclusive-executive-luncheon-transforming-operations-with-service-robotics/overview?token=ZT05YjY1ZTM3Yi04MGI0LTRjYmMtYWRhOC03ZDlhZDE1OGE3ZDUmcmM9SjRCUVVEWTEySw%3d%3d",
-      highlights: [
-        "Service Robotics",
-        "Intelligent Automation",
-        "Operational Excellence",
-      ],
-    },
+    // {
+    //   id: 1,
+    //   title: "信頼を築く：日本におけるAIガバナンスの新時代を読み解く",
+    //   date: "2026-07-02",
+    //   location: "Grand Hyatt Tokyo, Japan",
+    //   type: "Executive Lunch",
+    //   attendees: "Limited",
+    //   description:
+    //   "Join OneTrust and an exclusive group of data and security leaders for an executive lunch session in Tokyo exploring AI governance, trusted data, continuous governance, and platform unity in an AI-native economy.",
+    //   image:
+    //   "https://storage.thetehgroup.com/flmngr-prod/images/6a19051ff2965_OneTrust JP banner (in Japanese).jpg",
+    //   registrationStatus: "Open",
+    //   registrationLink:
+    //   "https://event.thetehgroup.com/ai/overview?token=ZT04M2M2ZWUwZC1jMmQ3LTQwNDItOTkzMi03NDQxMDBmMTMzYTcmcmM9TVpBRU02NkdBSA%3d%3d",
+    //   highlights: [
+    //   "AI Governance",
+    //   "Executive Lunch",
+    //   "Live Solution Demo",
+    // ],
+    // },
+    // {
+    //   id: 2,
+    //   title: "Putting AI to Work: Building the Connected, Intelligent Enterprise",
+    //   date: "2026-07-08",
+    //   location: "Jakarta, Indonesia",
+    //   type: "Executive Session",
+    //   attendees: "Limited",
+    //   description:
+    //   "Explore how ServiceNow and Google Cloud help enterprises move from isolated AI experiments to enterprise-wide AI execution by connecting AI, data, workflows, employees, and customers on a trusted platform.",
+    //   image:
+    //   "https://storage.thetehgroup.com/flmngr-prod/images/6a2a350930a41_Copy of Untitled Design (2).jpg",
+    //   registrationStatus: "Open",
+    //   registrationLink:
+    //   "https://event.thetehgroup.com/putting-ai-to-work-building-the-connected-intelligent-enterprise/overview?token=ZT1kMjVmYjM5MS0yZjRjLTQ1OTctODY3My1iODAzY2E3MDU4YTgmcmM9VTBIQjY1R0VLUA%3d%3d",
+    //   highlights: [
+    //   "Enterprise AI",
+    //   "Connected Workflows",
+    //   "Responsible AI",
+    // ],
+    // },
+    // {
+    //   id: 3,
+    //   title: "Exclusive Executive Luncheon: Transforming Operations with Service Robotics",
+    //   date: "2026-07-09",
+    //   location: "Nuanza Hotel & Convention, Cikarang, Indonesia",
+    //   type: "Executive Luncheon",
+    //   attendees: "Limited",
+    //   description:
+    //   "An exclusive gathering for operations and manufacturing decision-makers to explore how robotics and intelligent automation can improve productivity, optimize resources, and drive operational excellence.",
+    //   image:
+    //   "https://storage.thetehgroup.com/flmngr-prod/images/6a2a7c2ba4ec9_pudu Banner 2_Artboard 1.webp",
+    //   registrationStatus: "Open",
+    //   registrationLink:
+    //   "https://event.thetehgroup.com/exclusive-executive-luncheon-transforming-operations-with-service-robotics/overview?token=ZT05YjY1ZTM3Yi04MGI0LTRjYmMtYWRhOC03ZDlhZDE1OGE3ZDUmcmM9SjRCUVVEWTEySw%3d%3d",
+    //   highlights: [
+    //   "Service Robotics",
+    //   "Intelligent Automation",
+    //   "Operational Excellence",
+    // ],
+    // },
     {
       id: 4,
       title: "Nexus FT - BFSI TECH, AI & RISK for Digital Economy",
