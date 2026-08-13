@@ -2,7 +2,17 @@ import { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { X, Play } from "lucide-react";
 
-export default function VideoModal({ isOpen, onClose, videoSrc }) {
+export default function VideoModal({
+  isOpen,
+  onClose,
+  videoSrc,
+  // Fallback when we don't have the raw file (e.g. a LinkedIn post embed).
+  // Format: https://www.linkedin.com/embed/feed/update/urn:li:activity:<id>
+  embedUrl,
+  // "landscape" (default) | "portrait" — social clips are usually portrait.
+  orientation = "landscape",
+  title = "Video",
+}) {
   const [videoError, setVideoError] = useState(false);
   const [isClient, setIsClient] = useState(false);
   const [hasAnimatedIn, setHasAnimatedIn] = useState(false);
@@ -43,6 +53,17 @@ export default function VideoModal({ isOpen, onClose, videoSrc }) {
 
   if (!isOpen || !isClient) return null;
 
+  const isPortrait = orientation === "portrait";
+  const isEmbed = !videoSrc && Boolean(embedUrl);
+
+  // Embeds ship their own chrome (LinkedIn adds a hashtag header and a
+  // reaction bar), so a bare 9/16 box clips them. Give it viewport height
+  // instead and let the provider lay itself out.
+  const frameSize =
+    isEmbed ? "max-w-[420px] h-[min(88vh,820px)]"
+    : isPortrait ? "max-w-md aspect-[9/16]"
+    : "max-w-6xl aspect-video";
+
   const modalContent = (
     <div
       className={`fixed inset-0 z-9999 flex items-center justify-center px-4 transition-opacity duration-500 ease-out ${
@@ -57,7 +78,7 @@ export default function VideoModal({ isOpen, onClose, videoSrc }) {
 
       {/* Modal Container */}
       <div
-        className={`relative w-full max-w-6xl aspect-video bg-slate-950/40 backdrop-blur-2xl rounded-[28px] border border-white/10 shadow-[0_25px_120px_rgba(0,0,0,0.65)] overflow-hidden transition-all duration-500 ease-out transform ${
+        className={`relative w-full ${frameSize} bg-slate-950/40 backdrop-blur-2xl rounded-[28px] border border-white/10 shadow-[0_25px_120px_rgba(0,0,0,0.65)] overflow-hidden transition-all duration-500 ease-out transform ${
           hasAnimatedIn ?
             "opacity-100 scale-100 translate-y-0"
           : "opacity-0 scale-95 translate-y-4"
@@ -76,19 +97,35 @@ export default function VideoModal({ isOpen, onClose, videoSrc }) {
         </button>
 
         {/* Video Player - Auto Play */}
-        <video
-          autoPlay
-          className="w-full h-full object-cover rounded-[28px]"
-          controls
-          onError={() => setVideoError(true)}
-          onLoadedData={() => setVideoError(false)}
-          playsInline>
-          <source src={videoSrc} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        {videoSrc ?
+          <video
+            autoPlay
+            className={`w-full h-full rounded-[28px] ${
+              isPortrait ? "object-contain bg-black" : "object-cover"
+            }`}
+            controls
+            onError={() => setVideoError(true)}
+            onLoadedData={() => setVideoError(false)}
+            playsInline>
+            <source src={videoSrc} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+          // No raw file — fall back to the third-party embed. Note this can be
+          // blocked by adblockers or if the source post is not public.
+        : embedUrl ?
+          <iframe
+            allow="encrypted-media; fullscreen; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full rounded-[28px] bg-black"
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+            src={embedUrl}
+            title={title}
+          />
+        : null}
 
         {/* Fallback: If no video source, show message */}
-        {(!videoSrc || videoError) && (
+        {!embedUrl && (!videoSrc || videoError) && (
           <div className="absolute inset-0 flex items-center justify-center bg-linear-to-br from-slate-900 to-slate-800 rounded-[28px]">
             <div className="text-center p-8">
               <Play className="w-16 h-16 mx-auto mb-4 text-emerald-400" />

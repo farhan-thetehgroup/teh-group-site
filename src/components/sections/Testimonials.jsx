@@ -1,7 +1,15 @@
 // sections/Testimonials.jsx
 import { useRef, useEffect, useState } from "react";
-import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Linkedin,
+  PlayCircle,
+  Quote,
+  Star,
+} from "lucide-react";
 import { Badge } from "../Badge";
+import VideoModal from "../VideoModal";
 
 const Testimonials = () => {
   const sectionRef = useRef(null);
@@ -9,6 +17,7 @@ const Testimonials = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
   const [isInView, setIsInView] = useState(false);
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
   const testimonials = [
     {
@@ -71,6 +80,22 @@ const Testimonials = () => {
       avatar:
         "/images/Testimonials/Charles-Elias-White.png",
     },
+    {
+      id: 6,
+      name: "Niko Akatyev",
+      position: "Principal Cybersecurity Architect",
+      company: "Bitdefender",
+      event: "NEXUS Malaysia 2026",
+      rating: 5,
+      // Lightly cleaned from the video transcript (fillers removed only).
+      testimonial:
+        "All our time was used very efficiently — we didn't idle. The people we met had very specific agendas, so we have very actionable follow-ups after these meetings.",
+      avatar: "/images/Testimonials/Niko-Akatyev.png",
+      videoSrc: "/videos/testimonials/niko-akatyev.mp4",
+      videoOrientation: "portrait",
+      linkedInUrl:
+        "https://www.linkedin.com/feed/update/urn:li:activity:7471385793874247680/",
+    },
   ];
 
   // Start/pause auto-play only when the section is in view
@@ -96,15 +121,17 @@ const Testimonials = () => {
   }, []);
 
   // OPTIMIZED: Slower auto-play for better readability
+  // Also paused while the video modal is open, otherwise the slide behind it
+  // advances and the modal ends up showing a video from a different person.
   useEffect(() => {
-    if (!isInView) return;
+    if (!isInView || isVideoOpen) return;
 
     const interval = setInterval(() => {
       nextSlide();
     }, 7000); // Increased from 5s to 7s
 
     return () => clearInterval(interval);
-  }, [currentSlide, isInView]);
+  }, [currentSlide, isInView, isVideoOpen]);
 
   // OPTIMIZED: Faster transition lock release
   const nextSlide = () => {
@@ -131,6 +158,9 @@ const Testimonials = () => {
   };
 
   const currentTestimonial = testimonials[currentSlide];
+  const hasVideo = Boolean(
+    currentTestimonial.videoSrc || currentTestimonial.videoEmbedUrl
+  );
 
   return (
     <section
@@ -235,6 +265,34 @@ const Testimonials = () => {
                   "{currentTestimonial.testimonial}"
                 </p>
 
+                {/* Video CTA + source link — only for testimonials that have them */}
+                {(hasVideo || currentTestimonial.linkedInUrl) && (
+                  <div className="flex flex-wrap items-center gap-3">
+                    {hasVideo && (
+                      <button
+                        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-400/40 hover:border-cyan-400/70 text-cyan-200 hover:text-white font-semibold text-sm sm:text-base backdrop-blur-sm transition-all duration-300 group"
+                        onClick={() => setIsVideoOpen(true)}
+                        type="button"
+                        aria-label={`Watch video testimonial from ${currentTestimonial.name}`}>
+                        <PlayCircle className="w-5 h-5 transition-transform group-hover:scale-110" />
+                        Watch video
+                      </button>
+                    )}
+
+                    {currentTestimonial.linkedInUrl && (
+                      <a
+                        className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-white/20 bg-white/5 hover:bg-white/10 text-gray-300 hover:text-white text-sm transition-colors duration-300"
+                        href={currentTestimonial.linkedInUrl}
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        aria-label={`View the original LinkedIn post from ${currentTestimonial.name}`}>
+                        <Linkedin className="w-4 h-4" />
+                        View on LinkedIn
+                      </a>
+                    )}
+                  </div>
+                )}
+
                 {/* Divider */}
                 <div className="h-px w-24 bg-gradient-to-r from-cyan-400 to-transparent" />
 
@@ -336,6 +394,15 @@ const Testimonials = () => {
           </span>
         </div>
       </div>
+
+      <VideoModal
+        embedUrl={currentTestimonial.videoEmbedUrl}
+        isOpen={isVideoOpen && hasVideo}
+        onClose={() => setIsVideoOpen(false)}
+        orientation={currentTestimonial.videoOrientation}
+        title={`Video testimonial — ${currentTestimonial.name}`}
+        videoSrc={currentTestimonial.videoSrc}
+      />
     </section>
   );
 };
