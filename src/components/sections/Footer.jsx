@@ -70,7 +70,7 @@ const Footer = () => {
         {
           name: "China",
           link: "#",
-        }
+        },
       ],
     },
     {
@@ -92,17 +92,26 @@ const Footer = () => {
     {
       name: "Indonesia",
       company: "TEH Group",
-      address: "Jalan Mampang Prpt. Raya Nomor 100 5, Desa/Kelurahan Tegal Parang, Kec. Mampang Prapatan, Kota Adm. Jakarta Selatan, Provinsi DKI Jakarta",
+      address:
+        "19th Floor Lippo Kuningan Tower H. R. Kav B-12, RT.6/RW.7, Kuningan, Karet Kuningan, Kecamatan Setiabudi, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12920",
     },
     {
       name: "Hong Kong",
       company: "TEH Group",
-      address: "Room 2508, 25th Floor, Tower One Lippo Centre, No.89 Queensway, Hong Kong",
+      address:
+        "Room 2508, 25th Floor, Tower One Lippo Centre, No.89 Queensway, Hong Kong",
     },
     {
       name: "Malaysia",
       company: "TEH Group",
-      address: "Menara 1, Jalan Bangsar, KL Eco City, 59200 Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",
+      address:
+        "Menara 1, Jalan Bangsar, KL Eco City, 59200 Kuala Lumpur, Federal Territory of Kuala Lumpur, Malaysia",
+    },
+    {
+      name: "Philippines",
+      company: "TEH Group",
+      address:
+        "Unit 3204, Tycoon Center, Pearl Drive, San Antonio, Ortigas Center, Pasig City, Metro Manila, 1605",
     },
   ];
 
@@ -130,12 +139,12 @@ const Footer = () => {
               key={`star-${i}`}
               className="absolute rounded-full bg-white animate-twinkle"
               style={{
-                width: Math.random() * 3 + 1 + 'px',
-                height: Math.random() * 3 + 1 + 'px',
-                top: Math.random() * 100 + '%',
-                left: Math.random() * 100 + '%',
-                animationDelay: Math.random() * 5 + 's',
-                animationDuration: Math.random() * 3 + 2 + 's',
+                width: Math.random() * 3 + 1 + "px",
+                height: Math.random() * 3 + 1 + "px",
+                top: Math.random() * 100 + "%",
+                left: Math.random() * 100 + "%",
+                animationDelay: Math.random() * 5 + "s",
+                animationDuration: Math.random() * 3 + 2 + "s",
                 opacity: Math.random() * 0.7 + 0.3,
               }}
             />
@@ -163,10 +172,10 @@ const Footer = () => {
               key={`shooting-${i}`}
               className="absolute h-[2px] w-16 bg-gradient-to-r from-transparent via-white to-transparent animate-shooting-star"
               style={{
-                top: Math.random() * 80 + 10 + '%',
-                left: -100 + 'px',
-                animationDelay: Math.random() * 10 + 's',
-                animationDuration: Math.random() * 2 + 1 + 's',
+                top: Math.random() * 80 + 10 + "%",
+                left: -100 + "px",
+                animationDelay: Math.random() * 10 + "s",
+                animationDuration: Math.random() * 2 + 1 + "s",
               }}
             />
           ))}
@@ -200,7 +209,9 @@ const Footer = () => {
             </span>
           </div>
           <p className="max-w-3xl mx-auto text-lg text-slate-200/80 leading-relaxed">
-            Connecting enterprises with verified decision-makers and creating strategic opportunities that fuel commercial performance across Asia Pacific.
+            Connecting enterprises with verified decision-makers and creating
+            strategic opportunities that fuel commercial performance across Asia
+            Pacific.
           </p>
         </div>
 
@@ -216,10 +227,11 @@ const Footer = () => {
             {offices.map((office) => (
               <div
                 key={office.name}
-                className="relative group backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-emerald-400/30 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-emerald-500/20">
+                className="relative group backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/10 hover:border-emerald-400/30 transition-all duration-300 shadow-lg hover:shadow-2xl hover:shadow-emerald-500/20"
+              >
                 {/* Glass card glow effect */}
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-emerald-400/20 via-cyan-400/20 to-blue-500/20 rounded-2xl blur opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10"></div>
-                
+
                 <div className="space-y-3 relative z-10">
                   <div className="font-bold text-white text-lg mb-1">
                     {office.name}
@@ -247,7 +259,8 @@ const Footer = () => {
                   <li key={object.name}>
                     <a
                       href={object.link}
-                      className="block text-left transition-colors duration-300 hover:text-white">
+                      className="block text-left transition-colors duration-300 hover:text-white"
+                    >
                       {object.name}
                     </a>
                   </li>
@@ -264,11 +277,13 @@ const Footer = () => {
                 key={social.name}
                 href={social.link}
                 className="flex items-center justify-center w-12 h-12 rounded-full border border-white/10 hover:border-cyan-400/70 transition-colors duration-300 text-slate-200/80 hover:text-white"
-                aria-label={social.name}>
+                aria-label={social.name}
+              >
                 <svg
                   fill="currentColor"
                   viewBox="0 0 24 24"
-                  className="w-5 h-5">
+                  className="w-5 h-5"
+                >
                   <path d={social.icon} />
                 </svg>
               </a>
@@ -278,13 +293,15 @@ const Footer = () => {
             <div className="flex items-center gap-4 text-xs text-slate-400">
               <button
                 onClick={() => setIsPrivacyModalOpen(true)}
-                className="hover:text-emerald-400 transition-colors duration-300 cursor-pointer">
+                className="hover:text-emerald-400 transition-colors duration-300 cursor-pointer"
+              >
                 Privacy Policy
               </button>
               <span className="text-slate-500">|</span>
               <button
                 onClick={() => setIsTermsModalOpen(true)}
-                className="hover:text-emerald-400 transition-colors duration-300 cursor-pointer">
+                className="hover:text-emerald-400 transition-colors duration-300 cursor-pointer"
+              >
                 Terms & Conditions
               </button>
             </div>
