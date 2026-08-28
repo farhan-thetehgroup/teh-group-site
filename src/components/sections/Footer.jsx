@@ -223,7 +223,7 @@ const Footer = () => {
             </h4>
             <div className="w-24 h-0.5 mx-auto bg-gradient-to-r from-transparent via-emerald-400 to-transparent"></div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {offices.map((office) => (
               <div
                 key={office.name}
