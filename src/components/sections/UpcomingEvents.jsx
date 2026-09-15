@@ -154,7 +154,7 @@ const UpcomingEvents = () => {
       title: "Nexus FT - BFSI TECH, AI & RISK for Digital Economy",
       date: "2026-09-16",
       time: "08:00 – 16:00 (GMT+7)",
-      location: "InterContinental Bangkok, Thailand",
+      location: "St Regis Bangkok, Thailand",
       type: "Conference",
       attendees: "300+",
       description:
