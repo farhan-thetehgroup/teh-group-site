@@ -22,66 +22,6 @@ const Testimonials = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Edy Susanto",
-      position: "IT Director",
-      company: "PT Trans Retail Indonesia",
-      event: "AI Nexus 2025",
-      rating: 5,
-      testimonial:
-        "It was a great event to met with all the IT Expert to share knowledge and experience. Special thanks to the AI Nexus organizers, TEH Group and support from Raisya Effendi Siregar for the great hospitality during the event.",
-      avatar:
-        "/images/Testimonials/Edy-Susanto-White.png",
-    },
-    {
-      id: 2,
-      name: "Radito Maulana Putra",
-      position: "Chief Technology Officer",
-      company: "Roatex Indonesia Toll System",
-      event: "AI Nexus 2025",
-      rating: 5,
-      testimonial:
-        "Many thanks for the great event and the hospitality TEH Group",
-      avatar:
-        "/images/Testimonials/Radito-Maulana-White.png",
-    },
-    {
-      id: 3,
-      name: "Erikman Pardemean Sitorus",
-      position: "Chapter Secretary",
-      company: "ISACA Indonesia Chapter",
-      event: "AI Nexus",
-      rating: 5,
-      testimonial:
-        "Huge appreciation to the TEH Group team, especially Jeffrey Teh and Raisya, for hosting such a meaningful and well-organized event.",
-      avatar:
-        "/images/Testimonials/Erikman-Pardamean-White.png",
-    },
-    {
-      id: 4,
-      name: "Budiarto Solomon",
-      position: "Operation Manager",
-      company: "PT Citra Rasa Betawi(Kafe Betawi)",
-      event: "COO Dinner",
-      rating: 5,
-      testimonial:
-        "Eventnya sangat seru dan insightful, terutama untuk saya. Semoga lebih banyak acara kedepannya dan saya bisa join kembali.",
-      avatar:
-        "/images/Testimonials/Budiarto-solomon.jpg",
-    },
-    {
-      id: 5,
-      name: "Charles Elias",
-      position: "Director of Commercial IT and Digital",
-      company: "AstraZeneca",
-      event: "AI Nexus",
-      rating: 5,
-      testimonial:
-        "Grateful to the organizers Teh Group, my fellow panelists Karim Taslim Edy Susanto Edi Sugianto Sonny Supriyadi , and the audience for the engaging dialogue and shared optimism for Indonesia’s digital future.",
-      avatar:
-        "/images/Testimonials/Charles-Elias-White.png",
-    },
-    {
-      id: 6,
       name: "Niko Akatyev",
       position: "Principal Cybersecurity Architect",
       company: "Bitdefender",
@@ -95,6 +35,66 @@ const Testimonials = () => {
       videoOrientation: "portrait",
       linkedInUrl:
         "https://www.linkedin.com/feed/update/urn:li:activity:7471385793874247680/",
+    },
+    {
+      id: 2,
+      name: "Edy Susanto",
+      position: "IT Director",
+      company: "PT Trans Retail Indonesia",
+      event: "AI Nexus 2025",
+      rating: 5,
+      testimonial:
+        "It was a great event to met with all the IT Expert to share knowledge and experience. Special thanks to the AI Nexus organizers, TEH Group and support from Raisya Effendi Siregar for the great hospitality during the event.",
+      avatar:
+        "/images/Testimonials/Edy-Susanto-White.png",
+    },
+    {
+      id: 3,
+      name: "Radito Maulana Putra",
+      position: "Chief Technology Officer",
+      company: "Roatex Indonesia Toll System",
+      event: "AI Nexus 2025",
+      rating: 5,
+      testimonial:
+        "Many thanks for the great event and the hospitality TEH Group",
+      avatar:
+        "/images/Testimonials/Radito-Maulana-White.png",
+    },
+    {
+      id: 4,
+      name: "Erikman Pardemean Sitorus",
+      position: "Chapter Secretary",
+      company: "ISACA Indonesia Chapter",
+      event: "AI Nexus",
+      rating: 5,
+      testimonial:
+        "Huge appreciation to the TEH Group team, especially Jeffrey Teh and Raisya, for hosting such a meaningful and well-organized event.",
+      avatar:
+        "/images/Testimonials/Erikman-Pardamean-White.png",
+    },
+    {
+      id: 5,
+      name: "Budiarto Solomon",
+      position: "Operation Manager",
+      company: "PT Citra Rasa Betawi(Kafe Betawi)",
+      event: "COO Dinner",
+      rating: 5,
+      testimonial:
+        "Eventnya sangat seru dan insightful, terutama untuk saya. Semoga lebih banyak acara kedepannya dan saya bisa join kembali.",
+      avatar:
+        "/images/Testimonials/Budiarto-solomon.jpg",
+    },
+    {
+      id: 6,
+      name: "Charles Elias",
+      position: "Director of Commercial IT and Digital",
+      company: "AstraZeneca",
+      event: "AI Nexus",
+      rating: 5,
+      testimonial:
+        "Grateful to the organizers Teh Group, my fellow panelists Karim Taslim Edy Susanto Edi Sugianto Sonny Supriyadi , and the audience for the engaging dialogue and shared optimism for Indonesia’s digital future.",
+      avatar:
+        "/images/Testimonials/Charles-Elias-White.png",
     },
   ];
 
