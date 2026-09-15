@@ -250,6 +250,88 @@ const UpcomingEvents = () => {
       ],
     },
     {
+      id: 10,
+      title: "Crypto Networking Drink",
+      date: "2026-09-29",
+      location: "Porterhouse, Central, Hong Kong",
+      type: "Networking Drinks",
+      attendees: "Limited",
+      description:
+        "As Virtual Asset Trading Platforms increasingly integrate AI-driven trading, risk scoring, and automated compliance into their architecture, the attack surface for digital asset ecosystems is shifting rapidly. Join key industry executives, CISOs, AI practitioners, and custody architects for an exclusive evening of technical insights and executive networking.",
+      image:
+        "https://storage.thetehgroup.com/flmngr-prod/images/6a90faea75d03_banner.jpg",
+      registrationStatus: "Open",
+      registrationLink:
+        "https://event.thetehgroup.com/crypto-networking-drink/registration?token=ZT1iNjdjNWMwMC1mZDY5LTQzZGEtOWEzZC1lNDUzODcyMjJiN2ImcmM9SlRWSUwzUDNWVg%3d%3d",
+      highlights: [
+        "Weaponized Trust",
+        "AI-Powered Threat Defense",
+        "Key Management & Governance",
+      ],
+    },
+    {
+      id: 11,
+      title:
+        "Putting AI to Work For Philippines: Building the Connected, Intelligent Enterprise",
+      date: "2026-10-14",
+      location: "Shangri-La The Fort, Manila, Philippines",
+      type: "Executive Session",
+      attendees: "Limited",
+      description:
+        "AI is creating new opportunities across every layer of the enterprise, but for most organizations the challenge is no longer access to AI — it is cutting through complexity, connecting fragmented systems, and scaling AI responsibly across operations, technology, employees and customers. This session explores how ServiceNow and Google Cloud help enterprises move from isolated AI experiments to enterprise-wide AI execution on a trusted, connected platform.",
+      image:
+        "https://storage.thetehgroup.com/flmngr-prod/images/6a8fed655127e_reg%20banner%20(1).jpg",
+      registrationStatus: "Open",
+      registrationLink:
+        "https://event.thetehgroup.com/putting-ai-to-work-for-philippines-building-the-connected-intelligent-enterprise/registration?token=ZT05YzNkYTAwMC00YmRjLTQ5OTYtOGJhMy0yMjBiNjcxZjAwMmEmcmM9OVRZUjlNT1RMQw%3d%3d",
+      highlights: [
+        "Enterprise AI",
+        "Connected Workflows",
+        "Responsible AI",
+      ],
+    },
+    {
+      id: 12,
+      title: "Nexus Hong Kong 2026",
+      date: "2026-10-27",
+      location: "Hopewell Hotel, Hong Kong",
+      type: "Conference",
+      attendees: "Limited",
+      description:
+        "Step into the future of enterprise technology at Nexus Hong Kong—where AI ambition meets cybersecurity reality. This exclusive gathering brings together CIOs, CISOs, architects, and digital leaders to explore how modern organizations are designing AI-first, data-driven ecosystems while defending against increasingly sophisticated threats.",
+      image:
+        "https://storage.thetehgroup.com/flmngr-prod/images/6a6989419bba9_nexus%20hk%20reg%20page-01.webp",
+      registrationStatus: "Open",
+      registrationLink:
+        "https://event.thetehgroup.com/nexus-hong-kong-2026/overview?token=ZT0xZDcwY2MwMC04ZDIzLTQ1NzAtYjNkNC00YTNkYmUwYTA4YzkmcmM9UUNXNFZUT0FBNQ%3d%3d",
+      highlights: [
+        "One-to-One Meetings",
+        "Technology Showcase",
+        "Expert-Led Sessions",
+      ],
+    },
+    {
+      id: 13,
+      title:
+        "Putting AI to Work For Malaysia: Building the Connected, Intelligent Enterprise",
+      date: "2026-10-29",
+      location: "Le Méridien Kuala Lumpur, Malaysia",
+      type: "Executive Session",
+      attendees: "Limited",
+      description:
+        "This session explores how enterprises can move from isolated AI experiments to enterprise-wide AI execution by bringing together AI, data and workflows on a trusted, connected platform. It focuses on how ServiceNow and Google Cloud are enabling organizations to unlock real-time intelligence, automate complex workflows, empower employees in the tools they already use, and build AI agents that can coordinate across ecosystems.",
+      image:
+        "https://storage.thetehgroup.com/flmngr-prod/images/6aa23e6818a48_6a880f52e2905_reg%20banner%20(2).png",
+      registrationStatus: "Open",
+      registrationLink:
+        "https://event.thetehgroup.com/putting-ai-to-work-for-malaysia-building-the-connected-intelligent-enterprise/overview?token=ZT0zNjkwODc1NC1iYTI0LTRiOTctYTQyZC03NjY5Y2NhZjgzMDAmcmM9T0pNMUtFT1RFUA%3d%3d",
+      highlights: [
+        "Enterprise AI",
+        "Connected Workflows",
+        "Responsible AI",
+      ],
+    },
+    {
       id: 9,
       title: "Tech Fest 2027",
       date: "2027-05-21",
