@@ -237,7 +237,13 @@ const UpcomingEventModal = ({ event, isOpen, onClose, onVideoPlay }) => {
                         : daysLeft <= 30 ? "text-orange-300"
                         : "text-emerald-300"
                       }`}>
-                      {daysLeft} Days
+                      {daysLeft < 0
+                        ? "Event Passed"
+                        : daysLeft === 0
+                        ? "Today"
+                        : daysLeft === 1
+                        ? "1 Day"
+                        : `${daysLeft} Days`}
                     </span>
                   </div>
                 </div>
@@ -316,17 +322,17 @@ const UpcomingEventModal = ({ event, isOpen, onClose, onVideoPlay }) => {
                     </div>
                   </div>
 
-                  {/* Duration */}
+                  {/* Time */}
                   <div className="flex items-start gap-3 p-4 rounded-xl bg-white/5 border border-white/10">
                     <div className="w-10 h-10 rounded-lg bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center flex-shrink-0">
                       <Clock className="w-5 h-5 text-cyan-400" />
                     </div>
                     <div>
                       <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">
-                        Duration
+                        Event Time
                       </p>
                       <p className="text-sm font-semibold text-white">
-                        {getDuration(event.date)}
+                        {event.time || getDuration(event.date)}
                       </p>
                     </div>
                   </div>

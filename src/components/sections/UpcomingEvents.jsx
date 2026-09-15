@@ -153,6 +153,7 @@ const UpcomingEvents = () => {
       id: 4,
       title: "Nexus FT - BFSI TECH, AI & RISK for Digital Economy",
       date: "2026-09-16",
+      time: "08:00 – 16:00 (GMT+7)",
       location: "InterContinental Bangkok, Thailand",
       type: "Conference",
       attendees: "300+",
@@ -173,6 +174,7 @@ const UpcomingEvents = () => {
       id: 10,
       title: "Crypto Networking Drink",
       date: "2026-09-29",
+      time: "17:00 – 20:00 (GMT+8)",
       location: "Porterhouse, Central, Hong Kong",
       type: "Networking Drinks",
       attendees: "Limited",
@@ -194,6 +196,7 @@ const UpcomingEvents = () => {
       title:
         "Putting AI to Work For Philippines: Building the Connected, Intelligent Enterprise",
       date: "2026-10-14",
+      time: "11:00 – 14:00 (GMT+8)",
       location: "Shangri-La The Fort, Manila, Philippines",
       type: "Executive Session",
       attendees: "Limited",
@@ -214,6 +217,7 @@ const UpcomingEvents = () => {
       id: 12,
       title: "Nexus Hong Kong 2026",
       date: "2026-10-27",
+      time: "08:00 – 15:30 (GMT+8)",
       location: "Hopewell Hotel, Hong Kong",
       type: "Conference",
       attendees: "Limited",
@@ -235,6 +239,7 @@ const UpcomingEvents = () => {
       title:
         "Putting AI to Work For Malaysia: Building the Connected, Intelligent Enterprise",
       date: "2026-10-29",
+      time: "11:00 – 14:00 (GMT+8)",
       location: "Le Méridien Kuala Lumpur, Malaysia",
       type: "Executive Session",
       attendees: "Limited",
@@ -255,6 +260,7 @@ const UpcomingEvents = () => {
       id: 9,
       title: "Tech Fest 2027",
       date: "2027-05-21",
+      time: "08:00 – 16:00 (GMT+8)",
       location:
         "Convention Hall, Hong Kong Convention and Exhibition Centre, Hong Kong",
       type: "Conference",
@@ -740,7 +746,13 @@ const UpcomingEvents = () => {
                                   ? "text-orange-300"
                                   : "text-emerald-300"
                               }`}>
-                              {daysLeft} Days
+                              {daysLeft < 0
+                                ? "Event Passed"
+                                : daysLeft === 0
+                                ? "Today"
+                                : daysLeft === 1
+                                ? "1 Day"
+                                : `${daysLeft} Days`}
                             </span>
                           </div>
                         </div>
@@ -806,7 +818,7 @@ const UpcomingEvents = () => {
                               <span>{event.attendees}</span>
                             </div>
                             <div className="text-cyan-400 font-semibold text-xs">
-                              {getDuration(event.date)}
+                              {event.time || getDuration(event.date)}
                             </div>
                           </div>
                         </div>
