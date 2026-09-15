@@ -159,7 +159,7 @@ const UpcomingEvents = () => {
       description:
         "Nexus FT 2026 brings together financial services leaders, technology decision-makers, and innovators to explore AI-driven growth, intelligent automation, digital customer experience, scalable payment infrastructure, and crypto adoption.",
       image:
-        "https://storage.thetehgroup.com/flmngr-prod/images/69de13ff4b53f_Banner 1 Nexus FT-01.webp",
+        "https://storage.thetehgroup.com/flmngr-prod/images/6a4485bb78e43_Banner 1 Nexus FT-02.webp",
       registrationStatus: "Open",
       registrationLink:
         "https://event.thetehgroup.com/-nexus-ft-bfsi-tech-ai-risk-for-digital-economy/overview?token=ZT0yZDUwMTRhZS04MzA5LTRkMTMtYTYzZi04ZWQ0NGFmZjBlODkmcmM9QjBKNUoyNU4xNw%3d%3d",
