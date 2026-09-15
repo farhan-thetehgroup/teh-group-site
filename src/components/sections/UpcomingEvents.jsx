@@ -153,13 +153,14 @@ const UpcomingEvents = () => {
       id: 4,
       title: "Nexus FT - BFSI TECH, AI & RISK for Digital Economy",
       date: "2026-09-16",
-      location: "InterContinental Bangkok, Thailand",
+      time: "08:00 – 16:00 (GMT+7)",
+      location: "St Regis Bangkok, Thailand",
       type: "Conference",
       attendees: "300+",
       description:
         "Nexus FT 2026 brings together financial services leaders, technology decision-makers, and innovators to explore AI-driven growth, intelligent automation, digital customer experience, scalable payment infrastructure, and crypto adoption.",
       image:
-        "https://storage.thetehgroup.com/flmngr-prod/images/69de13ff4b53f_Banner 1 Nexus FT-01.webp",
+        "https://storage.thetehgroup.com/flmngr-prod/images/6a4485bb78e43_Banner 1 Nexus FT-02.webp",
       registrationStatus: "Open",
       registrationLink:
         "https://event.thetehgroup.com/-nexus-ft-bfsi-tech-ai-risk-for-digital-economy/overview?token=ZT0yZDUwMTRhZS04MzA5LTRkMTMtYTYzZi04ZWQ0NGFmZjBlODkmcmM9QjBKNUoyNU4xNw%3d%3d",
@@ -170,89 +171,96 @@ const UpcomingEvents = () => {
       ],
     },
     {
-      id: 5,
-      title: "Salesforce Sunset Sessions: Unwinding, Networking, & Smarter CRM",
-      date: "2026-08-27",
-      location: "Sofitel Legend Metropole Hanoi, Vietnam",
-      type: "Networking Evening",
+      id: 10,
+      title: "Crypto Networking Drink",
+      date: "2026-09-29",
+      time: "17:00 – 20:00 (GMT+8)",
+      location: "Porterhouse, Central, Hong Kong",
+      type: "Networking Drinks",
       attendees: "Limited",
       description:
-        "Unwind, network, and spark smarter growth. Salesforce Sunset Sessions is an exclusive, closed-door evening designed for growth-minded leaders — no dense product pitches, just great food, drinks, and real peer-to-peer conversations on how to turn fragmented customer data into a major competitive advantage.",
+        "As Virtual Asset Trading Platforms increasingly integrate AI-driven trading, risk scoring, and automated compliance into their architecture, the attack surface for digital asset ecosystems is shifting rapidly. Join key industry executives, CISOs, AI practitioners, and custody architects for an exclusive evening of technical insights and executive networking.",
       image:
-        "https://storage.thetehgroup.com/flmngr-prod/images/6a2f8a14cc95b_Gemini_Generated_Image_p2rzujp2rzujp2rz.png",
+        "https://storage.thetehgroup.com/flmngr-prod/images/6a90faea75d03_banner.jpg",
       registrationStatus: "Open",
       registrationLink:
-        "https://event.thetehgroup.com/salesforce-sunset-sessions-unwinding-networking-smarter-crm/registration?token=ZT1iZjZhYTI3NC1hNmFiLTQzNjktOTQ0NS0wODBlYjE2NTMzNjQmcmM9RE1HRDMyNEVTRQ%3d%3d",
+        "https://event.thetehgroup.com/crypto-networking-drink/registration?token=ZT1iNjdjNWMwMC1mZDY5LTQzZGEtOWEzZC1lNDUzODcyMjJiN2ImcmM9SlRWSUwzUDNWVg%3d%3d",
       highlights: [
-        "Executive Networking",
-        "CRM & AI Insights",
-        "Lucky Draw",
+        "Weaponized Trust",
+        "AI-Powered Threat Defense",
+        "Key Management & Governance",
       ],
     },
     {
-      id: 6,
-      title: "AI & Next-Gen Storage Summit Singapore",
-      date: "2026-09-08",
-      location: "ParkRoyal Collection Marina Bay, Singapore",
-      type: "Executive Summit",
+      id: 11,
+      title:
+        "Putting AI to Work For Philippines: Building the Connected, Intelligent Enterprise",
+      date: "2026-10-14",
+      time: "11:00 – 14:00 (GMT+8)",
+      location: "Shangri-La The Fort, Manila, Philippines",
+      type: "Executive Session",
       attendees: "Limited",
       description:
-        "Uncage your data. Overclock your AI. Cut the cloud tax. As enterprise technology and AI initiatives accelerate, yesterday's storage architecture simply can't keep up. Discover high-density, ultra-fast data solutions engineered to eliminate operational bottlenecks, unify hybrid environments, and bring cost predictability back to your tech budget.",
+        "AI is creating new opportunities across every layer of the enterprise, but for most organizations the challenge is no longer access to AI — it is cutting through complexity, connecting fragmented systems, and scaling AI responsibly across operations, technology, employees and customers. This session explores how ServiceNow and Google Cloud help enterprises move from isolated AI experiments to enterprise-wide AI execution on a trusted, connected platform.",
       image:
-        "https://storage.thetehgroup.com/flmngr-prod/images/6a727d815add8_Gemini_Generated_Image_vb3v3wvb3v3wvb3v.png",
+        "https://storage.thetehgroup.com/flmngr-prod/images/6a8fed655127e_reg%20banner%20(1).jpg",
       registrationStatus: "Open",
       registrationLink:
-        "https://event.thetehgroup.com/ai-next-gen-storage-summit-singapore/registration?token=ZT0wMTMyMzIwYi1kY2E5LTQ4MWMtYWNiMy00YTM1MDY1MTUxZGImcmM9WFoyQkFQRFpMRA%3d%3d",
+        "https://event.thetehgroup.com/putting-ai-to-work-for-philippines-building-the-connected-intelligent-enterprise/registration?token=ZT05YzNkYTAwMC00YmRjLTQ5OTYtOGJhMy0yMjBiNjcxZjAwMmEmcmM9OVRZUjlNT1RMQw%3d%3d",
       highlights: [
-        "Next-Gen Storage",
-        "AI-Ready Data",
-        "Cost Optimization",
+        "Enterprise AI",
+        "Connected Workflows",
+        "Responsible AI",
       ],
     },
     {
-      id: 7,
-      title: "BytePlus AI Day Hong Kong 2026",
-      date: "2026-09-09",
-      location: "Conrad Hong Kong, Hong Kong",
-      type: "Invitation-Only Summit",
-      attendees: "300+",
+      id: 12,
+      title: "Nexus Hong Kong 2026",
+      date: "2026-10-27",
+      time: "08:00 – 15:30 (GMT+8)",
+      location: "Hopewell Hotel, Hong Kong",
+      type: "Conference",
+      attendees: "Limited",
       description:
-        "BytePlus AI Day Hong Kong 2026 is BytePlus's premier annual invitation-only event, convening approximately 300 senior business leaders, technology decision-makers, and AI practitioners at Conrad Hong Kong. Under the theme 'Agentic Mind, Creative Frontiers', the event explores how enterprises can move beyond generative AI experimentation to deploy autonomous agentic systems that drive tangible business transformation.",
+        "Step into the future of enterprise technology at Nexus Hong Kong—where AI ambition meets cybersecurity reality. This exclusive gathering brings together CIOs, CISOs, architects, and digital leaders to explore how modern organizations are designing AI-first, data-driven ecosystems while defending against increasingly sophisticated threats.",
       image:
-        "https://storage.thetehgroup.com/flmngr-prod/images/6a69c2ebd8e26_banner.jpg",
+        "https://storage.thetehgroup.com/flmngr-prod/images/6a6989419bba9_nexus%20hk%20reg%20page-01.webp",
       registrationStatus: "Open",
       registrationLink:
-        "https://event.thetehgroup.com/byteplus-ai-day-hong-kong-2026/registration?token=ZT05YmFjYmE4OS01ODZhLTQwOTItODQ3NC1hOGU5MjE3NGU0ODUmcmM9VzJWMVZBU0VCVQ%3d%3d",
+        "https://event.thetehgroup.com/nexus-hong-kong-2026/overview?token=ZT0xZDcwY2MwMC04ZDIzLTQ1NzAtYjNkNC00YTNkYmUwYTA4YzkmcmM9UUNXNFZUT0FBNQ%3d%3d",
       highlights: [
-        "Agentic AI",
-        "Interactive Zones",
-        "Executive Networking",
+        "One-to-One Meetings",
+        "Technology Showcase",
+        "Expert-Led Sessions",
       ],
     },
     {
-      id: 8,
-      title: "Indonesia Spend & Procurement Summit",
-      date: "2026-09-10",
-      location: "Park Hyatt Jakarta, Indonesia",
-      type: "Executive Summit",
+      id: 13,
+      title:
+        "Putting AI to Work For Malaysia: Building the Connected, Intelligent Enterprise",
+      date: "2026-10-29",
+      time: "11:00 – 14:00 (GMT+8)",
+      location: "Le Méridien Kuala Lumpur, Malaysia",
+      type: "Executive Session",
       attendees: "Limited",
       description:
-        "Designed exclusively for CPOs and CFOs, this private, peer-driven forum tackles the critical intersection of margin protection, AI adoption, and strategic resilience. Join a curated group of senior leaders to discuss how leading organizations are shifting spend management from a cost-control function to a strategic driver of profitability and growth.",
+        "This session explores how enterprises can move from isolated AI experiments to enterprise-wide AI execution by bringing together AI, data and workflows on a trusted, connected platform. It focuses on how ServiceNow and Google Cloud are enabling organizations to unlock real-time intelligence, automate complex workflows, empower employees in the tools they already use, and build AI agents that can coordinate across ecosystems.",
       image:
-        "https://storage.thetehgroup.com/flmngr-prod/images/6a54e6163648c_6a3e411152fbd_Gemini_Generated_Image_ayg7mxayg7mxayg7.png",
+        "https://storage.thetehgroup.com/flmngr-prod/images/6aa23e6818a48_6a880f52e2905_reg%20banner%20(2).png",
       registrationStatus: "Open",
       registrationLink:
-        "https://event.thetehgroup.com/indonesia-spend-procurement-summit/registration?token=ZT1jM2ViYzk0Ni0zN2YxLTRmZDgtYmE4Zi0yMGE1YzM4MzJhNmQmcmM9TE1VVE9INkZUVQ%3d%3d",
+        "https://event.thetehgroup.com/putting-ai-to-work-for-malaysia-building-the-connected-intelligent-enterprise/overview?token=ZT0zNjkwODc1NC1iYTI0LTRiOTctYTQyZC03NjY5Y2NhZjgzMDAmcmM9T0pNMUtFT1RFUA%3d%3d",
       highlights: [
-        "CPO & CFO Forum",
-        "AI Adoption Roadmap",
-        "Spend Management",
+        "Enterprise AI",
+        "Connected Workflows",
+        "Responsible AI",
       ],
     },
     {
       id: 9,
       title: "Tech Fest 2027",
       date: "2027-05-21",
+      time: "08:00 – 16:00 (GMT+8)",
       location:
         "Convention Hall, Hong Kong Convention and Exhibition Centre, Hong Kong",
       type: "Conference",
@@ -738,7 +746,13 @@ const UpcomingEvents = () => {
                                   ? "text-orange-300"
                                   : "text-emerald-300"
                               }`}>
-                              {daysLeft} Days
+                              {daysLeft < 0
+                                ? "Event Passed"
+                                : daysLeft === 0
+                                ? "Today"
+                                : daysLeft === 1
+                                ? "1 Day"
+                                : `${daysLeft} Days`}
                             </span>
                           </div>
                         </div>
@@ -804,7 +818,7 @@ const UpcomingEvents = () => {
                               <span>{event.attendees}</span>
                             </div>
                             <div className="text-cyan-400 font-semibold text-xs">
-                              {getDuration(event.date)}
+                              {event.time || getDuration(event.date)}
                             </div>
                           </div>
                         </div>
