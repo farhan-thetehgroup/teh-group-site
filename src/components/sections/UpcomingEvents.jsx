@@ -149,70 +149,70 @@ const UpcomingEvents = () => {
     //   "Operational Excellence",
     // ],
     // },
-    {
-      id: 4,
-      title: "Nexus FT - BFSI TECH, AI & RISK for Digital Economy",
-      date: "2026-09-16",
-      time: "08:00 – 16:00 (GMT+7)",
-      location: "St Regis Bangkok, Thailand",
-      type: "Conference",
-      attendees: "300+",
-      description:
-        "Nexus FT 2026 brings together financial services leaders, technology decision-makers, and innovators to explore AI-driven growth, intelligent automation, digital customer experience, scalable payment infrastructure, and crypto adoption.",
-      image:
-        "https://storage.thetehgroup.com/flmngr-prod/images/6a4485bb78e43_Banner 1 Nexus FT-02.webp",
-      registrationStatus: "Open",
-      registrationLink:
-        "https://event.thetehgroup.com/-nexus-ft-bfsi-tech-ai-risk-for-digital-economy/overview?token=ZT0yZDUwMTRhZS04MzA5LTRkMTMtYTYzZi04ZWQ0NGFmZjBlODkmcmM9QjBKNUoyNU4xNw%3d%3d",
-      highlights: [
-        "One-to-One Meetings",
-        "Technology Showcase",
-        "Expert-Led Sessions",
-      ],
-    },
-    {
-      id: 10,
-      title: "Crypto Networking Drink",
-      date: "2026-09-29",
-      time: "17:00 – 20:00 (GMT+8)",
-      location: "Porterhouse, Central, Hong Kong",
-      type: "Networking Drinks",
-      attendees: "Limited",
-      description:
-        "As Virtual Asset Trading Platforms increasingly integrate AI-driven trading, risk scoring, and automated compliance into their architecture, the attack surface for digital asset ecosystems is shifting rapidly. Join key industry executives, CISOs, AI practitioners, and custody architects for an exclusive evening of technical insights and executive networking.",
-      image:
-        "https://storage.thetehgroup.com/flmngr-prod/images/6a90faea75d03_banner.jpg",
-      registrationStatus: "Open",
-      registrationLink:
-        "https://event.thetehgroup.com/crypto-networking-drink/registration?token=ZT1iNjdjNWMwMC1mZDY5LTQzZGEtOWEzZC1lNDUzODcyMjJiN2ImcmM9SlRWSUwzUDNWVg%3d%3d",
-      highlights: [
-        "Weaponized Trust",
-        "AI-Powered Threat Defense",
-        "Key Management & Governance",
-      ],
-    },
-    {
-      id: 11,
-      title:
-        "Putting AI to Work For Philippines: Building the Connected, Intelligent Enterprise",
-      date: "2026-10-14",
-      time: "11:00 – 14:00 (GMT+8)",
-      location: "Shangri-La The Fort, Manila, Philippines",
-      type: "Executive Session",
-      attendees: "Limited",
-      description:
-        "AI is creating new opportunities across every layer of the enterprise, but for most organizations the challenge is no longer access to AI — it is cutting through complexity, connecting fragmented systems, and scaling AI responsibly across operations, technology, employees and customers. This session explores how ServiceNow and Google Cloud help enterprises move from isolated AI experiments to enterprise-wide AI execution on a trusted, connected platform.",
-      image:
-        "https://storage.thetehgroup.com/flmngr-prod/images/6a8fed655127e_reg%20banner%20(1).jpg",
-      registrationStatus: "Open",
-      registrationLink:
-        "https://event.thetehgroup.com/putting-ai-to-work-for-philippines-building-the-connected-intelligent-enterprise/registration?token=ZT05YzNkYTAwMC00YmRjLTQ5OTYtOGJhMy0yMjBiNjcxZjAwMmEmcmM9OVRZUjlNT1RMQw%3d%3d",
-      highlights: [
-        "Enterprise AI",
-        "Connected Workflows",
-        "Responsible AI",
-      ],
-    },
+    // {
+    //   id: 4,
+    //   title: "Nexus FT - BFSI TECH, AI & RISK for Digital Economy",
+    //   date: "2026-09-16",
+    //   time: "08:00 – 16:00 (GMT+7)",
+    //   location: "St Regis Bangkok, Thailand",
+    //   type: "Conference",
+    //   attendees: "300+",
+    //   description:
+    //     "Nexus FT 2026 brings together financial services leaders, technology decision-makers, and innovators to explore AI-driven growth, intelligent automation, digital customer experience, scalable payment infrastructure, and crypto adoption.",
+    //   image:
+    //     "https://storage.thetehgroup.com/flmngr-prod/images/6a4485bb78e43_Banner 1 Nexus FT-02.webp",
+    //   registrationStatus: "Open",
+    //   registrationLink:
+    //     "https://event.thetehgroup.com/-nexus-ft-bfsi-tech-ai-risk-for-digital-economy/overview?token=ZT0yZDUwMTRhZS04MzA5LTRkMTMtYTYzZi04ZWQ0NGFmZjBlODkmcmM9QjBKNUoyNU4xNw%3d%3d",
+    //   highlights: [
+    //     "One-to-One Meetings",
+    //     "Technology Showcase",
+    //     "Expert-Led Sessions",
+    //   ],
+    // },
+    // {
+    //   id: 10,
+    //   title: "Crypto Networking Drink",
+    //   date: "2026-09-29",
+    //   time: "17:00 – 20:00 (GMT+8)",
+    //   location: "Porterhouse, Central, Hong Kong",
+    //   type: "Networking Drinks",
+    //   attendees: "Limited",
+    //   description:
+    //     "As Virtual Asset Trading Platforms increasingly integrate AI-driven trading, risk scoring, and automated compliance into their architecture, the attack surface for digital asset ecosystems is shifting rapidly. Join key industry executives, CISOs, AI practitioners, and custody architects for an exclusive evening of technical insights and executive networking.",
+    //   image:
+    //     "https://storage.thetehgroup.com/flmngr-prod/images/6a90faea75d03_banner.jpg",
+    //   registrationStatus: "Open",
+    //   registrationLink:
+    //     "https://event.thetehgroup.com/crypto-networking-drink/registration?token=ZT1iNjdjNWMwMC1mZDY5LTQzZGEtOWEzZC1lNDUzODcyMjJiN2ImcmM9SlRWSUwzUDNWVg%3d%3d",
+    //   highlights: [
+    //     "Weaponized Trust",
+    //     "AI-Powered Threat Defense",
+    //     "Key Management & Governance",
+    //   ],
+    // },
+    // {
+    //   id: 11,
+    //   title:
+    //     "Putting AI to Work For Philippines: Building the Connected, Intelligent Enterprise",
+    //   date: "2026-10-14",
+    //   time: "11:00 – 14:00 (GMT+8)",
+    //   location: "Shangri-La The Fort, Manila, Philippines",
+    //   type: "Executive Session",
+    //   attendees: "Limited",
+    //   description:
+    //     "AI is creating new opportunities across every layer of the enterprise, but for most organizations the challenge is no longer access to AI — it is cutting through complexity, connecting fragmented systems, and scaling AI responsibly across operations, technology, employees and customers. This session explores how ServiceNow and Google Cloud help enterprises move from isolated AI experiments to enterprise-wide AI execution on a trusted, connected platform.",
+    //   image:
+    //     "https://storage.thetehgroup.com/flmngr-prod/images/6a8fed655127e_reg%20banner%20(1).jpg",
+    //   registrationStatus: "Open",
+    //   registrationLink:
+    //     "https://event.thetehgroup.com/putting-ai-to-work-for-philippines-building-the-connected-intelligent-enterprise/registration?token=ZT05YzNkYTAwMC00YmRjLTQ5OTYtOGJhMy0yMjBiNjcxZjAwMmEmcmM9OVRZUjlNT1RMQw%3d%3d",
+    //   highlights: [
+    //     "Enterprise AI",
+    //     "Connected Workflows",
+    //     "Responsible AI",
+    //   ],
+    // },
     {
       id: 12,
       title: "Nexus Hong Kong 2026",
