@@ -11,6 +11,7 @@ export default [
     files: ["**/*.{js,jsx}"],
     ignores: ["dist", "build", "coverage"],
     plugins: {
+      react,
       "react-hooks": reactHooks,
       import: importPlugin,
       prettier,

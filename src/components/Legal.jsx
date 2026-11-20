@@ -1,34 +1,37 @@
-import { X } from "lucide-react";
-import GlassModal from "./GlassModal";
+import { Link } from "react-router-dom";
+import Footer from "./sections/Footer";
 
-const PrivacyPolicyModal = ({ isOpen, onClose }) => {
+const Legal = () => {
   return (
-    <GlassModal
-      isOpen={isOpen}
-      onClose={onClose}
-      maxWidth="max-w-4xl"
-      freezeScroll={true}
-      ariaLabelledby="privacy-policy-title"
-    >
-      <div className="p-6 sm:p-8 lg:p-10">
+    <div className="min-h-screen bg-black text-white">
+      <div className="max-w-4xl mx-auto px-6 py-16">
         {/* Header */}
-        <div className="flex items-start justify-between mb-8">
-          <div className="flex-1">
-            <h1
-              id="privacy-policy-title"
-              className="text-3xl md:text-4xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-500 mb-2">
-              Privacy Policy
-            </h1>
-            <p className="text-slate-400 text-sm">
-              Last updated: December 15, 2025
-            </p>
-          </div>
-          <button
-            onClick={onClose}
-            className="ml-4 w-10 h-10 rounded-full bg-black/40 hover:bg-black/60 border border-white/20 hover:border-white/40 transition-all duration-300 flex items-center justify-center text-white group flex-shrink-0"
-            aria-label="Close modal">
-            <X className="w-5 h-5 transition-transform group-hover:rotate-90" />
-          </button>
+        <div className="mb-12">
+          <Link
+            to="/"
+            className="inline-flex items-center text-emerald-400 hover:text-emerald-300 transition-colors duration-300 mb-6"
+          >
+            <svg
+              className="w-5 h-5 mr-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M10 19l-7-7m0 0l7-7m-7 7h18"
+              />
+            </svg>
+            Back to Home
+          </Link>
+          <h1 className="text-4xl md:text-5xl font-black tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-cyan-400 to-blue-500 mb-4">
+            Privacy Policy
+          </h1>
+          <p className="text-slate-400 text-sm">
+            Last updated: December 15, 2025
+          </p>
         </div>
 
         {/* Content */}
@@ -126,8 +129,7 @@ const PrivacyPolicyModal = ({ isOpen, onClose }) => {
                 <a
                   href="https://thetehgroup.com"
                   className="text-emerald-400 hover:text-emerald-300"
-                  target="_blank"
-                  rel="noopener noreferrer">
+                >
                   https://thetehgroup.com
                 </a>
               </li>
@@ -573,7 +575,8 @@ const PrivacyPolicyModal = ({ isOpen, onClose }) => {
                 By email:{" "}
                 <a
                   href="mailto:hello@thetehgroup.com"
-                  className="text-emerald-400 hover:text-emerald-300">
+                  className="text-emerald-400 hover:text-emerald-300"
+                >
                   hello@thetehgroup.com
                 </a>
               </li>
@@ -582,8 +585,7 @@ const PrivacyPolicyModal = ({ isOpen, onClose }) => {
                 <a
                   href="https://thetehgroup.com"
                   className="text-emerald-400 hover:text-emerald-300"
-                  target="_blank"
-                  rel="noopener noreferrer">
+                >
                   https://thetehgroup.com
                 </a>
               </li>
@@ -591,9 +593,10 @@ const PrivacyPolicyModal = ({ isOpen, onClose }) => {
           </section>
         </div>
       </div>
-    </GlassModal>
+      <Footer />
+    </div>
   );
 };
 
-export default PrivacyPolicyModal;
+export default Legal;
 

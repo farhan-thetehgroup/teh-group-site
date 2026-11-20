@@ -1,10 +1,6 @@
-import { useState } from "react";
-import PrivacyPolicyModal from "../PrivacyPolicyModal";
-import TermsAndConditionsModal from "../TermsAndConditionsModal";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
-  const [isPrivacyModalOpen, setIsPrivacyModalOpen] = useState(false);
-  const [isTermsModalOpen, setIsTermsModalOpen] = useState(false);
   const linkColumns = [
     {
       title: "PRODUCTS",
@@ -291,19 +287,19 @@ const Footer = () => {
           </div>
           <div className="flex flex-col sm:flex-row sm:items-center gap-4">
             <div className="flex items-center gap-4 text-xs text-slate-400">
-              <button
-                onClick={() => setIsPrivacyModalOpen(true)}
-                className="hover:text-emerald-400 transition-colors duration-300 cursor-pointer"
+              <Link
+                to="/privacy-policy"
+                className="hover:text-emerald-400 transition-colors duration-300"
               >
                 Privacy Policy
-              </button>
+              </Link>
               <span className="text-slate-500">|</span>
-              <button
-                onClick={() => setIsTermsModalOpen(true)}
-                className="hover:text-emerald-400 transition-colors duration-300 cursor-pointer"
+              <Link
+                to="/terms-and-conditions"
+                className="hover:text-emerald-400 transition-colors duration-300"
               >
                 Terms & Conditions
-              </button>
+              </Link>
             </div>
             <div className="text-xs uppercase tracking-[0.1em] text-slate-400">
               © 2025 TEH Group. All rights reserved. Created with ❤
@@ -311,14 +307,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <PrivacyPolicyModal
-        isOpen={isPrivacyModalOpen}
-        onClose={() => setIsPrivacyModalOpen(false)}
-      />
-      <TermsAndConditionsModal
-        isOpen={isTermsModalOpen}
-        onClose={() => setIsTermsModalOpen(false)}
-      />
     </footer>
   );
 };
