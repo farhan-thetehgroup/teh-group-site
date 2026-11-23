@@ -7,6 +7,11 @@ import prettier from "eslint-plugin-prettier";
 export default [
   js.configs.recommended,
 
+  // Global ignores: must be an object with ONLY `ignores`, otherwise it is a
+  // per-config override and js.configs.recommended still lints dist/ (115MB of
+  // minified bundles → eslint spins for minutes).
+  { ignores: ["dist/**", "build/**", "coverage/**"] },
+
   {
     files: ["**/*.{js,jsx}"],
     ignores: ["dist", "build", "coverage"],
